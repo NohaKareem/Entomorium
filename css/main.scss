@@ -85,14 +85,17 @@ h4 {
     margin-top: 3%;
 }
 
+.downScroll:hover {
+    cursor: pointer;
+}
+
 // bug menu
 .horizontalScrollParent {
     overflow: hidden;
     margin-bottom: 10%;
 
     .horizontalScroll {
-        overflow-x: hidden;
-        overflow-y: scroll;
+        overflow-y: hidden;
         margin-bottom: -50px;
         padding-bottom: 50px;
         display: flex;

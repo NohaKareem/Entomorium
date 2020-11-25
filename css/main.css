@@ -64,13 +64,16 @@ h4 {
   margin-top: 3%;
 }
 
+.downScroll:hover {
+  cursor: pointer;
+}
+
 .horizontalScrollParent {
   overflow: hidden;
   margin-bottom: 10%;
 }
 .horizontalScrollParent .horizontalScroll {
-  overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: hidden;
   margin-bottom: -50px;
   padding-bottom: 50px;
   display: flex;
