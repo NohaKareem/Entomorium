@@ -99,13 +99,26 @@ h4 {
         flex-direction: row;
         max-width: 100vw;
         overflow-x: scroll;
+     
         .bug {
             display: flex;
             flex-direction: column;
             align-items: center;
             max-height: 1000px;
+
             img {
                 height: 500px;
+                transition: all 0.7s ease-in-out;
+            }
+
+            img.comingSoon:hover {
+                filter: saturate(0);
+            }
+
+            img.activeOption:hover {
+                cursor: pointer;
+                transform: scale(1.25) translate(-40px);
+                // margin-left: -25px;   
             }
         }
     }
