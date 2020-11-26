@@ -278,6 +278,14 @@ img.rose {
   top: 180px;
   left: 390px;
 }
+.container .harmoniaCon .harmoniaAnatomy1 .lensInfo {
+  visibility: hidden;
+  position: absolute;
+  top: 50px;
+  left: 230px;
+  background-color: #FDFDEC;
+  padding: 5px;
+}
 .container .harmoniaCon .xrayBack {
   width: 700px;
 }

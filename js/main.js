@@ -1,12 +1,14 @@
 (_ => {
 	"use strict";
-
+console.log('hi')
 	const DOWN_SCROLL = document.querySelector('.downScroll');
 	const BUGS = document.querySelectorAll('.bug');
 	const BUG_TITLES = document.querySelectorAll('.bug h4');
 	const LOGO = document.querySelectorAll('.logo');
 	let currTitle;
 
+	gsap.registerPlugin(ScrollToPlugin);
+	// gsap.registerPlugin(ScrollToPlugin);
 	// scrollto animation
 	DOWN_SCROLL.addEventListener("click", e => {
 		TweenLite.to(window, 1.5, {

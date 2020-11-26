@@ -359,6 +359,15 @@ img.rose {
                 top: 180px;//30%;
                 left: 390px;//54%;
             }
+
+            .lensInfo {
+                visibility: hidden;
+                position: absolute;
+                top: 50px;
+                left: 230px;
+                background-color: $paleParchment;
+                padding: 5px;
+            }
         }
         
         .xrayBack {
