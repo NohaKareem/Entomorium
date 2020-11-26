@@ -244,6 +244,7 @@ img.rose {
 }
 .container .harmoniaCon .harmoniaAnatomy1 {
   position: relative;
+  max-width: 1000px;
 }
 .container .harmoniaCon .harmoniaAnatomy1 .harmoniaImg {
   position: relative;
@@ -262,20 +263,20 @@ img.rose {
   transform: rotate(30deg);
 }
 .container .harmoniaCon .harmoniaAnatomy1 .lens1 {
-  top: 10%;
-  left: 45%;
+  top: 60px;
+  left: 330px;
 }
 .container .harmoniaCon .harmoniaAnatomy1 .lens2 {
-  top: 19%;
-  left: 47%;
+  top: 110px;
+  left: 355px;
 }
 .container .harmoniaCon .harmoniaAnatomy1 .lens3 {
-  top: 27%;
-  left: 45%;
+  top: 150px;
+  left: 360px;
 }
 .container .harmoniaCon .harmoniaAnatomy1 .lens4 {
-  top: 30%;
-  left: 54%;
+  top: 180px;
+  left: 390px;
 }
 .container .harmoniaCon .xrayBack {
   width: 700px;

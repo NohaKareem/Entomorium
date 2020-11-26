@@ -304,6 +304,7 @@ img.rose {
     .harmoniaCon {
         .harmoniaAnatomy1 {
             position: relative;
+            max-width: 1000px;
             // display:inline-block;
             // overflow: hidden;
             
@@ -340,23 +341,23 @@ img.rose {
             }
 
             .lens1 { // antenna
-                top: 10%;//13%;//20
-                left: 45%;//20
+                top: 60px;//10%;//13%;//20
+                left: 330px;//45%;//20
             }
             
             .lens2 { // eye
-                top: 19%;
-                left: 47%;
+                top: 110px;//19%;
+                left: 355px;//47%;//
             }
 
             .lens3 { // prosternum
-                top: 27%;
-                left: 45%;
+                top: 150px;//27%;
+                left: 360px;//45%;
             }
 
             .lens4 { // prosternal keel
-                top: 30%;
-                left: 54%;
+                top: 180px;//30%;
+                left: 390px;//54%;
             }
         }
         
