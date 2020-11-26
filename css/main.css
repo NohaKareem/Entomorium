@@ -285,6 +285,7 @@ img.rose {
   left: 230px;
   background-color: #FDFDEC;
   padding: 5px;
+  z-index: -1;
 }
 .container .harmoniaCon .xrayBack {
   width: 700px;
