@@ -2,6 +2,11 @@
   display: none;
 }
 
+a {
+  text-decoration: none;
+  color: #10061A;
+}
+
 body {
   background-color: #FDFDEC;
   color: #10061A;
@@ -24,7 +29,7 @@ h1, h2, h3, h4 {
   text-align: center;
 }
 
-h2 {
+h2, h1 {
   font-size: 80px;
 }
 
@@ -32,10 +37,10 @@ h1 {
   margin-top: 4%;
   margin-bottom: 2%;
   text-align: center;
-  font-size: 3.3rem;
+  font-size: 80px;
 }
 
-h3 {
+h3, h2 {
   margin-top: 5%;
   font-size: 57px;
 }
@@ -218,6 +223,62 @@ img.rose {
   position: absolute;
   margin-left: -123%;
   transform: rotate(-15deg);
+}
+
+.container header .logo_pictogram {
+  width: 100px;
+  margin-top: 2%;
+  margin-left: 3%;
+}
+.container header h1 {
+  margin-top: -7.5%;
+}
+.container main {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.container h2 {
+  text-align: left;
+  margin-left: 15%;
+}
+.container .harmoniaCon .harmoniaAnatomy1 {
+  position: relative;
+}
+.container .harmoniaCon .harmoniaAnatomy1 .harmoniaImg {
+  position: relative;
+  margin-left: -80px;
+  max-width: 1000px;
+}
+.container .harmoniaCon .harmoniaAnatomy1 .lensCon {
+  position: absolute;
+}
+.container .harmoniaCon .harmoniaAnatomy1 .lens {
+  width: 50px;
+  transition: transform 1s ease-in-out;
+}
+.container .harmoniaCon .harmoniaAnatomy1 .lens:hover {
+  cursor: pointer;
+  transform: rotate(30deg);
+}
+.container .harmoniaCon .harmoniaAnatomy1 .lens1 {
+  top: 10%;
+  left: 45%;
+}
+.container .harmoniaCon .harmoniaAnatomy1 .lens2 {
+  top: 19%;
+  left: 47%;
+}
+.container .harmoniaCon .harmoniaAnatomy1 .lens3 {
+  top: 27%;
+  left: 45%;
+}
+.container .harmoniaCon .harmoniaAnatomy1 .lens4 {
+  top: 30%;
+  left: 54%;
+}
+.container .harmoniaCon .xrayBack {
+  width: 700px;
 }
 
 /*# sourceMappingURL=main.css.map */

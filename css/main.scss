@@ -1,6 +1,7 @@
 $paleParchment: #FDFDEC;
 $chlorophyllGreen: #04461A;
 $inkyJetChracoal: #10061A;
+$pink: #CF9893;
 $buttonRad: 40px;
 $vidWid: 750px;
 $vidHt: 500px; 
@@ -19,6 +20,16 @@ $h4Size: 35px;
 .hidden {
 	display: none;
 }
+
+a {
+    text-decoration: none;
+    color: $inkyJetChracoal;
+}
+
+// .bug:hover a{
+//     color: $paleParchment;
+//     background-color: $chlorophyllGreen;
+// }
 
 body {
     background-color: $paleParchment;
@@ -42,7 +53,7 @@ h1, h2, h3, h4 {
     text-align: center;
 }
 
-h2 {
+h2, h1 {
     font-size: $h2Size;
 }
 
@@ -50,10 +61,11 @@ h1 {
     margin-top: 4%;
     margin-bottom: 2%;
     text-align: center;
-    font-size: 3.3rem;
+    font-size: $h2Size;
+    // font-size: 3.3rem;
 }
 
-h3 {
+h3, h2 {
     margin-top: 5%;
     font-size: $h3Size;
 }
@@ -257,4 +269,99 @@ img.rose {
     position: absolute;
     margin-left: -123%;
     transform: rotate(-15deg);
+}
+
+// harmonia page
+.container {
+    header {
+        // display: flex;
+        // justify-content: space-between;
+        // align-items: center;
+
+        .logo_pictogram {
+            width: 100px;
+            margin-top: 2%;
+            margin-left: 3%;
+            // margin-right: auto;
+        }
+
+        h1 {
+            margin-top: -7.5%;
+        }
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+.container {
+    h2 {
+        text-align: left;
+        margin-left: 15%;
+    }
+
+    .harmoniaCon {
+        .harmoniaAnatomy1 {
+            position: relative;
+            // display:inline-block;
+            // overflow: hidden;
+            
+            // img.harmoniaImg {
+            //     position: relative;
+            //     // margin-left: -20%;
+            //     // max-width: 100px;
+            //     // display:inline-block
+            // }
+
+            .harmoniaImg {
+                position: relative;
+                margin-left: -80px;
+                max-width: 1000px;
+            }
+
+            .lensCon {
+                position: absolute;
+            }
+            
+            .lens {
+                // position: absolute;
+                width: 50px; //70
+                transition: transform 1s ease-in-out;
+            }
+
+            // .harmoniaImg {
+            //     position: absolute;
+            // }
+
+            .lens:hover {
+                cursor: pointer;
+                transform: rotate(30deg);
+            }
+
+            .lens1 { // antenna
+                top: 10%;//13%;//20
+                left: 45%;//20
+            }
+            
+            .lens2 { // eye
+                top: 19%;
+                left: 47%;
+            }
+
+            .lens3 { // prosternum
+                top: 27%;
+                left: 45%;
+            }
+
+            .lens4 { // prosternal keel
+                top: 30%;
+                left: 54%;
+            }
+        }
+        
+        .xrayBack {
+            width: 700px;
+        }
+    }
 }
