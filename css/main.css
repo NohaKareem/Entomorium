@@ -91,6 +91,7 @@ h4 {
   flex-direction: column;
   align-items: center;
   max-height: 1000px;
+  margin: 5%;
 }
 .horizontalScrollParent .horizontalScroll .bug img {
   height: 300px;
