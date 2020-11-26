@@ -35,13 +35,14 @@ body {
     background-color: $paleParchment;
     color: $inkyJetChracoal;
     overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
 }
 
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'Open Sans', sans-serif;
+    // font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
     font-size: $pSize;
     font-style: normal;
@@ -70,8 +71,13 @@ h3, h2 {
     font-size: $h3Size;
 }
 
-h4 {
-    font-size: $h4Size;
+h4.label {
+    font-size: $h4Size / 1.5;
+}
+
+h4.comingSoon {
+    margin-top: 5%;
+    font-size: $h4Size / 2;
 }
 
 // header 
@@ -434,6 +440,23 @@ img.rose {
             li div:hover {
                 @extend .selectedPage;
             }
+        }
+    }
+}
+
+footer {
+    ul {
+        display: flex;
+        flex-direction: row;
+        margin-left: 2%;
+        
+        li {
+            margin-right: 2%;
+        }
+
+        li:hover {
+            cursor: pointer;
+            text-decoration: underline;
         }
     }
 }

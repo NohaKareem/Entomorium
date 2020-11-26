@@ -1,6 +1,6 @@
 (_ => {
 	"use strict";
-console.log('hi')
+
 	const DOWN_SCROLL = document.querySelector('.downScroll');
 	const BUGS = document.querySelectorAll('.bug');
 	const BUG_TITLES = document.querySelectorAll('.bug h4');
@@ -8,7 +8,7 @@ console.log('hi')
 	let currTitle;
 
 	gsap.registerPlugin(ScrollToPlugin);
-	// gsap.registerPlugin(ScrollToPlugin);
+
 	// scrollto animation
 	DOWN_SCROLL.addEventListener("click", e => {
 		TweenLite.to(window, 1.5, {
@@ -21,21 +21,21 @@ console.log('hi')
 		});
 	});
 
-	// alter hover text for bugs coming soon
-	BUGS.forEach((bug, i) => {
-		bug.addEventListener("mouseover", _=> {
-			if (!bug.classList.contains('activeOption')) {
-				currTitle = BUG_TITLES[i].innerHTML;
-				BUG_TITLES[i].innerHTML = "Coming Soon";
-			}
-		});
+	// // alter hover text for bugs coming soon
+	// BUGS.forEach((bug, i) => {
+	// 	bug.addEventListener("mouseover", _=> {
+	// 		if (!bug.classList.contains('activeOption')) {
+	// 			currTitle = BUG_TITLES[i].innerHTML;
+	// 			BUG_TITLES[i].innerHTML = "Coming Soon";
+	// 		}
+	// 	});
 
-		bug.addEventListener("mouseout", _=> {
-			if (!bug.classList.contains('activeOption')) { 
-				BUG_TITLES[i].innerHTML = currTitle;
-			}
-		});
-	});
+	// 	bug.addEventListener("mouseout", _=> {
+	// 		if (!bug.classList.contains('activeOption')) { 
+	// 			BUG_TITLES[i].innerHTML = currTitle;
+	// 		}
+	// 	});
+	// });
 
 	let timeline = gsap.timeline();
 	let easeFunction = "slow(0.7, 0.7, false)";

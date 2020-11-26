@@ -11,13 +11,13 @@ body {
   background-color: #FDFDEC;
   color: #10061A;
   overflow-x: hidden;
+  font-family: "Open Sans", sans-serif;
 }
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "Open Sans", sans-serif;
   font-weight: 300;
   font-size: 30px;
   font-style: normal;
@@ -45,8 +45,13 @@ h3, h2 {
   font-size: 57px;
 }
 
-h4 {
-  font-size: 35px;
+h4.label {
+  font-size: 23.3333333333px;
+}
+
+h4.comingSoon {
+  margin-top: 5%;
+  font-size: 17.5px;
 }
 
 .logo {
@@ -327,6 +332,18 @@ img.rose {
   border-radius: 50%;
   border: 1px solid #10061A;
   margin: 15px;
+}
+footer ul {
+  display: flex;
+  flex-direction: row;
+  margin-left: 2%;
+}
+footer ul li {
+  margin-right: 2%;
+}
+footer ul li:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=main.css.map */

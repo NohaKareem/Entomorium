@@ -3,7 +3,8 @@
     
     const LENSES = document.querySelectorAll('.lens');
     const LENS_INFO = document.querySelector('.lensInfo');
-    // const PAGE_NAV = document.querySelectorAll('.paginationNav li div');
+    const PAGE_NAV = document.querySelectorAll('.paginationNav li div');
+    const PAGES = document.querySelectorAll('.page');
     
     let toggleAlpha = 1;
 
@@ -18,4 +19,16 @@
             toggleAlpha = toggleAlpha ? 0 : 1;
         });
     });
+
+    // // add pagination
+    // PAGE_NAV.forEach((pageButton, i) => {
+    //     pageButton.addEventListener("click", _ => {
+    //         PAGES.forEach((page, j) => {
+    //             if (j == i)
+    //                 page.classList.remove('hidden');
+    //             else
+    //                 page.classList.add('hidden');
+    //         });
+    //     });
+    // });
 })();
