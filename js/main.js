@@ -21,22 +21,6 @@
 		});
 	});
 
-	// // alter hover text for bugs coming soon
-	// BUGS.forEach((bug, i) => {
-	// 	bug.addEventListener("mouseover", _=> {
-	// 		if (!bug.classList.contains('activeOption')) {
-	// 			currTitle = BUG_TITLES[i].innerHTML;
-	// 			BUG_TITLES[i].innerHTML = "Coming Soon";
-	// 		}
-	// 	});
-
-	// 	bug.addEventListener("mouseout", _=> {
-	// 		if (!bug.classList.contains('activeOption')) { 
-	// 			BUG_TITLES[i].innerHTML = currTitle;
-	// 		}
-	// 	});
-	// });
-
 	let timeline = gsap.timeline();
 	let easeFunction = "slow(0.7, 0.7, false)";
 	timeline

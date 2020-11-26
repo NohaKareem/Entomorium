@@ -15,7 +15,7 @@
             // console.log(document.querySelector('.lens1'))
             // LENS_INFO.left = lens.left - 100;
             // console.log(lens.left)
-            gsap.to(LENS_INFO, 1.5, { autoAlpha: toggleAlpha });//~
+            gsap.to(LENS_INFO, 1.5, { autoAlpha: toggleAlpha });
             toggleAlpha = toggleAlpha ? 0 : 1;
         });
     });

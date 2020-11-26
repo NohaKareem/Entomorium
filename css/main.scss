@@ -26,11 +26,6 @@ a {
     color: $inkyJetChracoal;
 }
 
-// .bug:hover a{
-//     color: $paleParchment;
-//     background-color: $chlorophyllGreen;
-// }
-
 body {
     background-color: $paleParchment;
     color: $inkyJetChracoal;
@@ -42,7 +37,6 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    // font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
     font-size: $pSize;
     font-style: normal;
@@ -63,7 +57,6 @@ h1 {
     margin-bottom: 2%;
     text-align: center;
     font-size: $h2Size;
-    // font-size: 3.3rem;
 }
 
 h3, h2 {
@@ -144,8 +137,6 @@ h4.comingSoon {
             img.activeOption:hover {
                 cursor: pointer;
                 transform: scale(1.25);
-                // translate(-40px);//~
-                // margin-left: -25px;   
             }
         }
     }
@@ -158,12 +149,10 @@ h4.comingSoon {
 // video
 video {
     background-color: darken($chlorophyllGreen, 10);
-    // border-radius: 20% 20% 40% 40%;
     width: $vidWid;
     height: $vidHt;
     margin-top: 5%;
     transform: scale(0.75);
-    // box-shadow: 0px 0px 50px transparentize($inkyJetChracoal, 0.2);
 }
 
 .controlsRow {
@@ -319,30 +308,14 @@ img.rose {
         margin-left: 15%;
     }
     .paginationCon {
-        // display: flex;
-        // flex-direction: column;
-        // align-items: center;
-        // justify-items: center;
-
         .page1 {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
             column-gap: 80%;
-            // align-items: center;
-            // align-content: center;
 
             .harmoniaAnatomy1 {
                 position: relative;
                 max-width: 1000px;
-                // display:inline-block;
-                // overflow: hidden;
-                
-                // img.harmoniaImg {
-                //     position: relative;
-                //     // margin-left: -20%;
-                //     // max-width: 100px;
-                //     // display:inline-block
-                // }
 
                 .harmoniaImg {
                     position: relative;
@@ -355,14 +328,9 @@ img.rose {
                 }
                 
                 .lens {
-                    // position: absolute;
                     width: 50px; //70
                     transition: transform 1s ease-in-out;
                 }
-
-                // .harmoniaImg {
-                //     position: absolute;
-                // }
 
                 .lens:hover {
                     cursor: pointer;
@@ -370,23 +338,23 @@ img.rose {
                 }
 
                 .lens1 { // antenna
-                    top: 60px;//10%;//13%;//20
-                    left: 330px;//45%;//20
+                    top: 60px;
+                    left: 330px;
                 }
                 
                 .lens2 { // eye
-                    top: 110px;//19%;
-                    left: 355px;//47%;//
+                    top: 110px;
+                    left: 355px;
                 }
 
                 .lens3 { // prosternum
-                    top: 150px;//27%;
-                    left: 360px;//45%;
+                    top: 150px;
+                    left: 360px;
                 }
 
                 .lens4 { // prosternal keel
-                    top: 180px;//30%;
-                    left: 390px;//54%;
+                    top: 180px;
+                    left: 390px;
                 }
 
                 .lensInfo {
@@ -418,7 +386,6 @@ img.rose {
     nav {
         width: 400px;
         height: 50px;
-        // margin: 0 auto;
         margin-left: 40vw;
         text-align: center;
         
