@@ -93,15 +93,18 @@ h4 {
   max-height: 1000px;
 }
 .horizontalScrollParent .horizontalScroll .bug img {
-  height: 500px;
+  height: 300px;
   transition: all 0.7s ease-in-out;
+}
+.horizontalScrollParent .horizontalScroll .bug img.comingSoon {
+  filter: saturate(0.5);
 }
 .horizontalScrollParent .horizontalScroll .bug img.comingSoon:hover {
   filter: saturate(0);
 }
 .horizontalScrollParent .horizontalScroll .bug img.activeOption:hover {
   cursor: pointer;
-  transform: scale(1.25) translate(-40px);
+  transform: scale(1.25);
 }
 
 .menu {

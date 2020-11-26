@@ -122,8 +122,12 @@ h4 {
             max-height: 1000px;
 
             img {
-                height: 500px;
+                height: 300px;//~
                 transition: all 0.7s ease-in-out;
+            }
+
+            img.comingSoon {
+                filter: saturate(0.5);
             }
 
             img.comingSoon:hover {
@@ -132,7 +136,8 @@ h4 {
 
             img.activeOption:hover {
                 cursor: pointer;
-                transform: scale(1.25) translate(-40px);
+                transform: scale(1.25);
+                // translate(-40px);//~
                 // margin-left: -25px;   
             }
         }
