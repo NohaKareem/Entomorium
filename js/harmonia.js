@@ -3,6 +3,8 @@
     
     const LENSES = document.querySelectorAll('.lens');
     const LENS_INFO = document.querySelector('.lensInfo');
+    // const PAGE_NAV = document.querySelectorAll('.paginationNav li div');
+    
     let toggleAlpha = 1;
 
     // show info box on click

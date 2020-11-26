@@ -98,7 +98,7 @@ h4 {
   transition: all 0.7s ease-in-out;
 }
 .horizontalScrollParent .horizontalScroll .bug img.comingSoon {
-  filter: saturate(0.5);
+  filter: saturate(0.4);
 }
 .horizontalScrollParent .horizontalScroll .bug img.comingSoon:hover {
   filter: saturate(0);
@@ -114,11 +114,10 @@ h4 {
 
 video {
   background-color: #011608;
-  border-radius: 20% 20% 40% 40%;
   width: 750px;
   height: 500px;
   margin-top: 5%;
-  box-shadow: 0px 0px 50px rgba(16, 6, 26, 0.8);
+  transform: scale(0.75);
 }
 
 .controlsRow {
@@ -131,7 +130,7 @@ video {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   column-gap: 20%;
   text-align: center;
-  margin-top: -100px;
+  margin-top: -160px;
 }
 
 button {
@@ -206,7 +205,10 @@ button.speed {
 }
 .scrubberCon .scrubberTime {
   color: #FDFDEC;
-  margin-top: -5px;
+  margin-top: -2px;
+  margin-left: 80%;
+  font-size: 13px;
+  position: absolute;
 }
 
 .swapVid {
@@ -246,43 +248,48 @@ img.rose {
   text-align: left;
   margin-left: 15%;
 }
-.container .harmoniaCon .harmoniaAnatomy1 {
+.container .paginationCon .page1 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 80%;
+}
+.container .paginationCon .page1 .harmoniaAnatomy1 {
   position: relative;
   max-width: 1000px;
 }
-.container .harmoniaCon .harmoniaAnatomy1 .harmoniaImg {
+.container .paginationCon .page1 .harmoniaAnatomy1 .harmoniaImg {
   position: relative;
   margin-left: -80px;
   max-width: 1000px;
 }
-.container .harmoniaCon .harmoniaAnatomy1 .lensCon {
+.container .paginationCon .page1 .harmoniaAnatomy1 .lensCon {
   position: absolute;
 }
-.container .harmoniaCon .harmoniaAnatomy1 .lens {
+.container .paginationCon .page1 .harmoniaAnatomy1 .lens {
   width: 50px;
   transition: transform 1s ease-in-out;
 }
-.container .harmoniaCon .harmoniaAnatomy1 .lens:hover {
+.container .paginationCon .page1 .harmoniaAnatomy1 .lens:hover {
   cursor: pointer;
   transform: rotate(30deg);
 }
-.container .harmoniaCon .harmoniaAnatomy1 .lens1 {
+.container .paginationCon .page1 .harmoniaAnatomy1 .lens1 {
   top: 60px;
   left: 330px;
 }
-.container .harmoniaCon .harmoniaAnatomy1 .lens2 {
+.container .paginationCon .page1 .harmoniaAnatomy1 .lens2 {
   top: 110px;
   left: 355px;
 }
-.container .harmoniaCon .harmoniaAnatomy1 .lens3 {
+.container .paginationCon .page1 .harmoniaAnatomy1 .lens3 {
   top: 150px;
   left: 360px;
 }
-.container .harmoniaCon .harmoniaAnatomy1 .lens4 {
+.container .paginationCon .page1 .harmoniaAnatomy1 .lens4 {
   top: 180px;
   left: 390px;
 }
-.container .harmoniaCon .harmoniaAnatomy1 .lensInfo {
+.container .paginationCon .page1 .harmoniaAnatomy1 .lensInfo {
   visibility: hidden;
   position: absolute;
   top: 50px;
@@ -291,8 +298,35 @@ img.rose {
   padding: 5px;
   z-index: -1;
 }
-.container .harmoniaCon .xrayBack {
+.container .paginationCon .page1 .xrayBack {
   width: 700px;
+}
+.container .page2 {
+  width: 100%;
+}
+.container .selectedPage, .container nav ul.paginationNav li div:hover {
+  cursor: pointer;
+  background-color: transparent;
+}
+.container nav {
+  width: 400px;
+  height: 50px;
+  margin-left: 40vw;
+  text-align: center;
+}
+.container nav ul.paginationNav {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+}
+.container nav ul.paginationNav li div {
+  background-color: #10061A;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid #10061A;
+  margin: 15px;
 }
 
 /*# sourceMappingURL=main.css.map */

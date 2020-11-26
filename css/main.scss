@@ -128,7 +128,7 @@ h4 {
             }
 
             img.comingSoon {
-                filter: saturate(0.5);
+                filter: saturate(0.4);
             }
 
             img.comingSoon:hover {
@@ -152,11 +152,12 @@ h4 {
 // video
 video {
     background-color: darken($chlorophyllGreen, 10);
-    border-radius: 20% 20% 40% 40%;
+    // border-radius: 20% 20% 40% 40%;
     width: $vidWid;
     height: $vidHt;
     margin-top: 5%;
-    box-shadow: 0px 0px 50px transparentize($inkyJetChracoal, 0.2);
+    transform: scale(0.75);
+    // box-shadow: 0px 0px 50px transparentize($inkyJetChracoal, 0.2);
 }
 
 .controlsRow {
@@ -169,7 +170,7 @@ video {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     column-gap: 20%;
     text-align: center;
-    margin-top: $vidHt * -0.2;
+    margin-top: $vidHt * -0.32;
 }
 
 button {
@@ -255,7 +256,10 @@ button.speed {
 
     .scrubberTime {
         color: $paleParchment;
-        margin-top: -5px;
+        margin-top: -2px;
+        margin-left: 80%;
+        font-size: 13px;
+        position: absolute;
     }
 }
 
@@ -301,84 +305,135 @@ img.rose {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
+
+// bug pagination sections
 .container {
     h2 {
         text-align: left;
         margin-left: 15%;
     }
+    .paginationCon {
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
+        // justify-items: center;
 
-    .harmoniaCon {
-        .harmoniaAnatomy1 {
-            position: relative;
-            max-width: 1000px;
-            // display:inline-block;
-            // overflow: hidden;
-            
-            // img.harmoniaImg {
-            //     position: relative;
-            //     // margin-left: -20%;
-            //     // max-width: 100px;
-            //     // display:inline-block
-            // }
+        .page1 {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            column-gap: 80%;
+            // align-items: center;
+            // align-content: center;
 
-            .harmoniaImg {
+            .harmoniaAnatomy1 {
                 position: relative;
-                margin-left: -80px;
                 max-width: 1000px;
-            }
+                // display:inline-block;
+                // overflow: hidden;
+                
+                // img.harmoniaImg {
+                //     position: relative;
+                //     // margin-left: -20%;
+                //     // max-width: 100px;
+                //     // display:inline-block
+                // }
 
-            .lensCon {
-                position: absolute;
+                .harmoniaImg {
+                    position: relative;
+                    margin-left: -80px;
+                    max-width: 1000px;
+                }
+
+                .lensCon {
+                    position: absolute;
+                }
+                
+                .lens {
+                    // position: absolute;
+                    width: 50px; //70
+                    transition: transform 1s ease-in-out;
+                }
+
+                // .harmoniaImg {
+                //     position: absolute;
+                // }
+
+                .lens:hover {
+                    cursor: pointer;
+                    transform: rotate(30deg);
+                }
+
+                .lens1 { // antenna
+                    top: 60px;//10%;//13%;//20
+                    left: 330px;//45%;//20
+                }
+                
+                .lens2 { // eye
+                    top: 110px;//19%;
+                    left: 355px;//47%;//
+                }
+
+                .lens3 { // prosternum
+                    top: 150px;//27%;
+                    left: 360px;//45%;
+                }
+
+                .lens4 { // prosternal keel
+                    top: 180px;//30%;
+                    left: 390px;//54%;
+                }
+
+                .lensInfo {
+                    visibility: hidden;
+                    position: absolute;
+                    top: 50px;
+                    left: 230px;
+                    background-color: $paleParchment;
+                    padding: 5px;
+                    z-index: -1;
+                }
             }
             
-            .lens {
-                // position: absolute;
-                width: 50px; //70
-                transition: transform 1s ease-in-out;
-            }
-
-            // .harmoniaImg {
-            //     position: absolute;
-            // }
-
-            .lens:hover {
-                cursor: pointer;
-                transform: rotate(30deg);
-            }
-
-            .lens1 { // antenna
-                top: 60px;//10%;//13%;//20
-                left: 330px;//45%;//20
-            }
-            
-            .lens2 { // eye
-                top: 110px;//19%;
-                left: 355px;//47%;//
-            }
-
-            .lens3 { // prosternum
-                top: 150px;//27%;
-                left: 360px;//45%;
-            }
-
-            .lens4 { // prosternal keel
-                top: 180px;//30%;
-                left: 390px;//54%;
-            }
-
-            .lensInfo {
-                visibility: hidden;
-                position: absolute;
-                top: 50px;
-                left: 230px;
-                background-color: $paleParchment;
-                padding: 5px;
-                z-index: -1;
+            .xrayBack {
+                width: 700px;
             }
         }
+    }
+
+    .page2 {
+        width: 100%;
+    }
+
+    .selectedPage {
+        cursor: pointer;
+        background-color: transparent;
+    }
+
+    nav {
+        width: 400px;
+        height: 50px;
+        // margin: 0 auto;
+        margin-left: 40vw;
+        text-align: center;
         
-        .xrayBack {
-            width: 700px;
+        ul.paginationNav {
+            display: flex;
+            flex-direction: row;
+            justify-items: center;
+            align-items: center;
+            
+            li div {
+                background-color: $inkyJetChracoal;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                border: 1px solid $inkyJetChracoal;
+                margin: 15px;
+            }
+
+            li div:hover {
+                @extend .selectedPage;
+            }
         }
     }
 }

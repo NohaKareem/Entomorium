@@ -12,7 +12,6 @@
 	const PLAY_FA = `<i class="fa fa-play" aria-hidden="true"></i>`;
 	const PAUSE_FA = `<i class="fa fa-pause" aria-hidden="true"></i>`;
 
-
 	let speed = 1;
 
 	VID.removeAttribute('controls');
