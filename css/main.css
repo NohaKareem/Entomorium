@@ -118,9 +118,9 @@ h4.comingSoon {
 }
 
 video {
-  background-color: #011608;
-  width: 750px;
-  height: 500px;
+  background-color: #FDFDEC;
+  width: 900px;
+  height: 750px;
   margin-top: 5%;
   transform: scale(0.75);
 }
@@ -135,7 +135,7 @@ video {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   column-gap: 20%;
   text-align: center;
-  margin-top: -160px;
+  margin-top: -240px;
 }
 
 button {
@@ -144,19 +144,19 @@ button {
   width: 40px;
   height: 40px;
   border: none;
-  color: #FDFDEC;
-  margin-top: 50px;
-  left: 300px;
+  color: #10061A;
+  margin-top: 75px;
+  left: 360px;
   font-family: "Playfair Display SC", serif;
   position: relative;
   background-color: rgba(255, 255, 255, 0);
-  box-shadow: -3px -3px 13px 0.5px #04481b, 3px 3px 3px 0.5px rgba(16, 6, 26, 0.5);
+  box-shadow: -3px -3px 13px 0.5px #fdfdee, 3px 3px 3px 0.5px rgba(16, 6, 26, 0.5);
 }
 
 button:hover {
   color: #FDFDEC;
+  background-color: #10061A;
   cursor: pointer;
-  box-shadow: inset -3px -3px 10px 0.5px #04481b, inset 3px 3px 10px 0.5px rgba(16, 6, 26, 0.1);
 }
 
 button.speed {
@@ -165,8 +165,8 @@ button.speed {
 }
 
 .scrubberCon {
-  width: 525px;
-  margin-left: 112.5px;
+  width: 630px;
+  margin-left: 135px;
   border-radius: 5%;
   display: flex;
 }
@@ -174,7 +174,7 @@ button.speed {
   width: 100%;
   -webkit-appearance: none;
   -moz-appearance: none;
-  height: 2.5px;
+  height: 3.75px;
   outline: none;
   position: relative;
   z-index: 2;
@@ -190,14 +190,14 @@ button.speed {
   transition: 1s ease-out;
 }
 .scrubberCon input[type=range]::-webkit-slider-thumb:hover {
-  box-shadow: inset -3px -3px 10px 0.5px #04481b, inset 3px 3px 10px 0.5px rgba(16, 6, 26, 0.1);
+  box-shadow: inset -3px -3px 10px 0.5px #11061c, inset 3px 3px 10px 0.5px rgba(16, 6, 26, 0.1);
 }
 .scrubberCon .progress {
   position: absolute;
   z-index: 1;
   width: 75.5%;
-  height: 2.5px;
-  left: 112.5px;
+  height: 3.75px;
+  left: 135px;
   top: 2px;
   background-color: #04481b;
   overflow: hidden;
@@ -230,7 +230,7 @@ button.speed {
 }
 
 img.rose {
-  width: 375px;
+  width: 450px;
   position: absolute;
   margin-left: -123%;
   transform: rotate(-15deg);

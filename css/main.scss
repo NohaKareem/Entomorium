@@ -3,8 +3,8 @@ $chlorophyllGreen: #04461A;
 $inkyJetChracoal: #10061A;
 $pink: #CF9893;
 $buttonRad: 40px;
-$vidWid: 750px;
-$vidHt: 500px; 
+$vidWid: 900px;
+$vidHt: 750px; 
 $rangeHt: $vidHt * .005;
 $buttonFontSize: 15px;
 $pSize: 30px;
@@ -13,7 +13,8 @@ $h3Size: 57px;
 $h4Size: 35px;
 
 @mixin insetShadow {
-    box-shadow: inset -3px -3px 10px 0.5px lighten($chlorophyllGreen, 0.5),
+    // box-shadow: inset -3px -3px 10px 0.5px lighten($chlorophyllGreen, 0.5),
+    box-shadow: inset -3px -3px 10px 0.5px lighten($inkyJetChracoal, 0.5),
         inset 3px 3px 10px 0.5px transparentize($inkyJetChracoal, 0.9);  
 }
 
@@ -148,7 +149,8 @@ h4.comingSoon {
 
 // video
 video {
-    background-color: darken($chlorophyllGreen, 10);
+    // background-color: darken($chlorophyllGreen, 10);
+    background-color: $paleParchment;
     width: $vidWid;
     height: $vidHt;
     margin-top: 5%;
@@ -174,20 +176,23 @@ button {
     width: $buttonRad;
     height: $buttonRad;
     border: none;
-    color: $paleParchment;
+    color: $inkyJetChracoal;
+    // color: $paleParchment;
     margin-top: $vidHt * .1;
     left: $vidWid / 2.5;
     font-family: 'Playfair Display SC', serif;
     position: relative;
     background-color: rgba(255, 255, 255, 0);
-    box-shadow: -3px -3px 13px 0.5px lighten($chlorophyllGreen, 0.5),
+    // box-shadow: -3px -3px 13px 0.5px lighten($chlorophyllGreen, 0.5),
+    box-shadow: -3px -3px 13px 0.5px lighten($paleParchment, 0.5),
         3px 3px 3px 0.5px transparentize($inkyJetChracoal, 0.5);  
 }
 
 button:hover {
     color: $paleParchment;
+    background-color: $inkyJetChracoal;
     cursor: pointer;
-    @include insetShadow();
+    // @include insetShadow();
 }
 
 button.speed {
