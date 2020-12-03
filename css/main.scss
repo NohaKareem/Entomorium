@@ -18,8 +18,13 @@ $h4Size: 35px;
         inset 3px 3px 10px 0.5px transparentize($inkyJetChracoal, 0.9);  
 }
 
+// hide without display property, since it's overriden by grid 
+// https://css-tricks.com/places-its-tempting-to-use-display-none-but-dont/
 .hidden {
-	display: none;
+    // display: none;
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
 }
 
 a {
@@ -30,7 +35,7 @@ a {
 body {
     background-color: $paleParchment;
     color: $inkyJetChracoal;
-    overflow-x: hidden;
+    // overflow-x: hidden;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -307,16 +312,33 @@ img.rose {
 }
 
 // bug pagination sections
+.harmoniaCon {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw !important;
+    overflow-x: hidden;
+}
 .container {
     h2 {
         text-align: left;
         margin-left: 15%;
     }
+
     .paginationCon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .page {
+            
+        }
+
         .page1 {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
-            column-gap: 80%;
+            // column-gap: 80%;
 
             .harmoniaAnatomy1 {
                 position: relative;
@@ -372,15 +394,20 @@ img.rose {
                     z-index: -1;
                 }
             }
-            
-            .xrayBack {
-                width: 700px;
-            }
         }
     }
 
     .page2 {
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .xray {
+            max-width: 100%;
+        }
+
     }
 
     .selectedPage {
@@ -399,7 +426,7 @@ img.rose {
             flex-direction: row;
             justify-items: center;
             align-items: center;
-            
+
             li div {
                 background-color: $inkyJetChracoal;
                 width: 25px;

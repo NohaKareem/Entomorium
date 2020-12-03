@@ -20,15 +20,17 @@
         });
     });
 
-    // // add pagination
-    // PAGE_NAV.forEach((pageButton, i) => {
-    //     pageButton.addEventListener("click", _ => {
-    //         PAGES.forEach((page, j) => {
-    //             if (j == i)
-    //                 page.classList.remove('hidden');
-    //             else
-    //                 page.classList.add('hidden');
-    //         });
-    //     });
-    // });
+    // add pagination
+    PAGE_NAV.forEach((pageButton, i) => {
+        pageButton.addEventListener("click", _ => {
+            PAGES.forEach((page, j) => {
+                if (j == i)
+                    page.classList.remove('hidden');
+                else {
+                    page.classList.add('hidden');
+                    console.log(page.classList)
+                }
+            });
+        });
+    });
 })();
