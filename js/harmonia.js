@@ -33,4 +33,24 @@
             });
         });
     });
+
+    let frames = { frame: 0 };
+    let totalFrames = 90; //~
+    const FRAME_IMG = document.querySelector('.frameImg');
+
+    let swapFrames = _ => {
+        FRAME_IMG.src = `images/harmonia/frames/frame${(frames.frame).toString().padStart(4, '0')}.jpg`;
+    };
+
+    // frame scrubber~
+    gsap.to(frames, {
+        frame: totalFrames - 1, 
+        snap: "frame", 
+        scrollTrigger: {
+            scrub: 0.5//~
+        }, 
+        onUpdate: swapFrames
+    });
+
+
 })();
