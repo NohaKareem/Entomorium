@@ -10,9 +10,16 @@
     let toggleAlpha = [];
     // let toggleAlpha = 1;
 
-    // show info box on click
+    let tl = gsap.timeline();
     LENSES.forEach(lens => {
+
+        // add staggering animation 
+        tl.fromTo(lens, 0.3, { autoAlpha: 0} , { autoAlpha: 1, ease: "slow(0.7, 0.7, false)" });
+
+        // set visibility toggle
         toggleAlpha.push(1);
+        
+        // show info box on click
         lens.addEventListener("click", e => {
 
             // console.log(lens.left)
