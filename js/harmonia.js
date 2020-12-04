@@ -3,18 +3,17 @@
     
     const LENSES = document.querySelectorAll('.lens');
     const LENS_INFO = document.querySelectorAll('.lensInfo');
-    // const LENS_INFO = document.querySelector('.lensInfo');
     const PAGE_NAV = document.querySelectorAll('.paginationNav li div');
     const PAGES = document.querySelectorAll('.page');
     
     let toggleAlpha = [];
-    // let toggleAlpha = 1;
 
-    let tl = gsap.timeline();
+    let lensTimeline = gsap.timeline();
+    lensTimeline.fromTo(".harmoniaImg", 1.5, { autoAlpha: 0} , { autoAlpha: 1, ease: "slow(0.7, 0.7, false)" });
     LENSES.forEach(lens => {
 
         // add staggering animation 
-        tl.fromTo(lens, 0.3, { autoAlpha: 0} , { autoAlpha: 1, ease: "slow(0.7, 0.7, false)" });
+        lensTimeline.fromTo(lens, 0.3, { autoAlpha: 0} , { autoAlpha: 1, ease: "slow(0.7, 0.7, false)" });
 
         // set visibility toggle
         toggleAlpha.push(1);
@@ -41,8 +40,14 @@
 
             // show relevant page
             PAGES.forEach((page, j) => {
-                if (j == i)
+                if (j == i){
                     page.classList.remove('hidden');
+                    
+                    // restart animation
+                    if (j == 0) {
+                        lensTimeline.restart();
+                    }
+                }
                 else 
                     page.classList.add('hidden');
             });
@@ -70,7 +75,6 @@
         console.log('loading')
         // console.log(document.querySelector('.frameSeqCon1'))
         FRAME_IMG.src = `images/harmonia/frames/frame${(frames.frame).toString().padStart(4, '0')}.jpg`;
-        
     };
 
     
