@@ -8,11 +8,12 @@ $vidHt: 750px;
 $rangeHt: $vidHt * .005;
 $buttonFontSize: 15px;
 $pSize: 30px;
-$h2Size: 3rem;//80px;
-$h3Size: 2rem;//57px;
+$h2Size: 3rem;
+$h3Size: 2rem;
 $h4Size: 35px;
 $frameImgWid: 700px;
 $frameImgHt: 400px;
+$marginShift: -20px;
 
 @mixin insetShadow {
     // box-shadow: inset -3px -3px 10px 0.5px lighten($chlorophyllGreen, 0.5),
@@ -37,7 +38,6 @@ a {
 body {
     background-color: $paleParchment;
     color: $inkyJetChracoal;
-    // overflow-x: hidden;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -130,7 +130,7 @@ h4.comingSoon {
             margin: 5%;
 
             img {
-                height: 300px;//~
+                height: 300px;
                 transition: all 0.7s ease-in-out;
             }
 
@@ -291,20 +291,14 @@ img.rose {
 // harmonia page
 .container {
     header {
-        // display: flex;
-        // justify-content: space-between;
-        // align-items: center;
-
         .logo_pictogram {
-            width: 4vw;//100px;
+            width: 4vw;
             margin-top: 2%;
             margin-left: 3%;
-            // margin-right: auto;
         }
 
         h1 {
             margin-top: -3%;
-            // margin-top: -7.5%;
         }
     }
 
@@ -328,8 +322,7 @@ img.rose {
 
 .container {
     h2 {
-        text-align: left;
-        margin-left: 15%;
+        text-align: center;
     }
 
     .paginationCon {
@@ -340,31 +333,29 @@ img.rose {
 
         .page {
             margin: 0 5%;
-            // height: 60vh;//40vh;//~
         }
 
         .page1 {
-            // display: grid;
-            // grid-template-columns: repeat(2, minmax(0, 1fr));
-            // align-items: center;
-            // column-gap: 80%;
+            h2 {
+                margin-left: -5%;
+            }
 
             .caption {
                 margin: 0 auto;
                 text-align: center;
                 margin-left: -10%;
+                margin-top: $marginShift - 10;
             }
 
             .harmoniaAnatomy1 {
                 position: relative;
                 max-width: 1000px;
+                margin-top: $marginShift;
 
                 .harmoniaImg {
                     position: relative;
                     margin-left: -80px;
-                    // margin-top: -50px;
-                    max-width: 1000px;//~~~
-                    // max-width: 700px;
+                    max-width: 1000px;
                 }
 
                 .lensCon {
@@ -372,7 +363,7 @@ img.rose {
                 }
                 
                 .lens {
-                    width: 50px; //70
+                    width: 50px; 
                     transition: transform 1s ease-in-out;
                 }
 
@@ -429,32 +420,6 @@ img.rose {
                     }
                 }
             }
-            // .frameImg {
-            //     height: $frameImgHt;
-            // }
-            .frameSeqCon1 {
-                overflow-y: scroll;
-                height: $frameImgHt / 1.7; //~
-                overflow-x: hidden;
-                .frameSeqCon2 {
-                    height: 4000px;
-                    // height: $frameImgHt + 50;
-                    position: relative;
-                    // .frameImg {
-                    //     // width: $frameImgWid;
-                    //     height: $frameImgHt / 1.7;
-                    //     position: sticky;
-                    //     top: 0;
-                    //     left: 0;
-                    // }
-
-                    #harmoniaFramesCanvas, .frameImg {
-                        position: sticky;
-                        top: 0;
-                        bottom: 0;
-                    }
-                }
-            }
         }
     }
 
@@ -469,10 +434,47 @@ img.rose {
 
         .xray {
             max-width: 100%;
+            height: $frameImgHt;
+            margin-top: 2.5%;
         }
-
     }
 
+    .page3 {
+        .caption {
+            margin-top: 2.5%;
+            text-align: center;
+        }
+
+        .frameSeqCon1 {
+            margin-top: 2.5%;
+            overflow-y: scroll;
+            height: $frameImgHt; //~
+            overflow-x: hidden;
+
+            .frameSeqCon2 {
+                height: 4000px;
+                // height: $frameImgHt + 50;
+                position: relative;
+            
+                // .frameImg {
+                //     // width: $frameImgWid;
+                //     height: $frameImgHt / 1.7;
+                //     position: sticky;
+                //     top: 0;
+                //     left: 0;
+                // }
+
+                #harmoniaFramesCanvas, .frameImg {
+                    position: sticky;
+                    top: 0;
+                    bottom: 0;
+                }
+            }
+            .frameImg {
+                height: $frameImgHt;
+            }
+        }
+    }
     .selectedPage {
         cursor: pointer;
         background-color: transparent;
@@ -491,7 +493,7 @@ img.rose {
             justify-items: center;
             align-items: center;
             position: fixed;
-            top: 35%;
+            top: 50%;
             left: 5%;
             z-index: 5;
 

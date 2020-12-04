@@ -88,7 +88,7 @@
             // markers: true,
             // scroller: ".page3",
             // scroller: ".frameSequence",
-            // scroller: ".frameSeqCon1",
+            scroller: ".frameSeqCon1",
             scrub: 0.5//~
         }, 
         onUpdate: loadFrame
