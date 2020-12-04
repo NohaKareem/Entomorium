@@ -51,7 +51,6 @@
         let newImg = new Image();
         newImg.src =  `images/harmonia/frames/frame${(i+1).toString().padStart(4, '0')}.jpg`;
         frameImages.push(newImg);
-        
     }
 
     let loadFrame = _ => {
@@ -79,7 +78,7 @@
             markers: true,
             // scroller: ".page3",
             // scroller: ".frameSequence",
-            scroller: ".frameSeqCon1",
+            // scroller: ".frameSeqCon1",
             scrub: 0.5//~
         }, 
         onUpdate: loadFrame

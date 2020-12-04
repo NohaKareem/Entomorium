@@ -339,9 +339,9 @@ img.rose {
         }
 
         .page1 {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            align-items: center;
+            // display: grid;
+            // grid-template-columns: repeat(2, minmax(0, 1fr));
+            // align-items: center;
             // column-gap: 80%;
 
             .harmoniaAnatomy1 {
@@ -398,6 +398,10 @@ img.rose {
                     background-color: $paleParchment;
                     padding: 5px;
                     z-index: -1;
+                    font-size: $h4Size / 1.4;
+                    h4 {
+                        font-family: 'Open Sans', sans-serif;
+                    }
                 }
             }
             // .frameImg {
@@ -462,19 +466,14 @@ img.rose {
             justify-items: center;
             align-items: center;
             position: fixed;
-            // margin-top: -550px;//-25%;
             top: 35%;
             left: 5%;
-            // bottom: -5%;
-            // bottom: -5px;
             z-index: 5;
-            // margin-top: -3%;
-
 
             li div {
                 background-color: $inkyJetChracoal;
-                width: 25px;
-                height: 25px;
+                width: 15px;
+                height: 15px;
                 border-radius: 50%;
                 border: 1px solid $inkyJetChracoal;
                 margin: 15px;
