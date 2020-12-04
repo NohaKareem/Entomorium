@@ -413,14 +413,15 @@ img.rose {
 .container .page2 .frameSeqCon1 .frameSeqCon2 {
   height: 4000px;
   position: relative;
-  overflow-x: hidden;
   margin-right: -50px;
   padding-right: 50px;
 }
 .container .page2 .frameSeqCon1 .frameImg {
   height: 400px;
-  position: sticky !important;
-  top: 0 !important;
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: sticky;
+  top: 0;
   left: 0;
 }
 .container .selectedPage, .container nav ul.paginationNav li div:hover {

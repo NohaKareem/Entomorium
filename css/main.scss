@@ -454,22 +454,16 @@ img.rose {
 
             .frameSeqCon2 {
                 height: 4000px;
-                // height: $frameImgHt + 50;
                 position: relative;
-                overflow-x: hidden;
                 margin-right: -50px;
                 padding-right: 50px;
-        
-                // #harmoniaFramesCanvas, .frameImg {
-                //     position: sticky;
-                //     top: 0;
-                //     left: 0;
-                // }
             }
             .frameImg {
                 height: $frameImgHt;
-                position: sticky !important;
-                top: 0 !important;
+                position: -webkit-sticky;
+                position: -moz-sticky;
+                position: sticky;
+                top: 0;
                 left: 0;
             }
         }

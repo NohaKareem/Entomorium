@@ -59,10 +59,8 @@
             });
         });
     });
-
     
     // frame scrubber
-    // note: there is a bug where the scrubber only works after opening the console in browser (F12)
     let frames = { frame: 0 };
     let totalFrames = 90; 
     const FRAME_IMG = document.querySelector('.frameImg');
