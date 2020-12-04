@@ -450,28 +450,25 @@ img.rose {
             overflow-y: scroll;
             height: $frameImgHt;
             overflow-x: hidden;
+            margin-right: 50px;
 
-            // bug menu
-                // margin-bottom: 10%;
-
-                //     margin-bottom: -50px;
-                //     padding-bottom: 50px;
-                
-            
             .frameSeqCon2 {
                 height: 4000px;
                 // height: $frameImgHt + 50;
                 position: relative;
                 overflow-x: hidden;
+                margin-right: -50px;
+                padding-right: 50px;
         
-                #harmoniaFramesCanvas, .frameImg {
-                    position: sticky;
-                    top: 0;
-                    left: 0;
-                }
+                // #harmoniaFramesCanvas, .frameImg {
+                //     position: sticky;
+                //     top: 0;
+                //     left: 0;
+                // }
             }
             .frameImg {
-                height: $frameImgHt;  position: sticky;
+                height: $frameImgHt;
+                position: sticky;
                 top: 0;
                 left: 0;
             }

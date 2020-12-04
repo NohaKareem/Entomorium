@@ -408,16 +408,14 @@ img.rose {
   overflow-y: scroll;
   height: 400px;
   overflow-x: hidden;
+  margin-right: 50px;
 }
 .container .page2 .frameSeqCon1 .frameSeqCon2 {
   height: 4000px;
   position: relative;
   overflow-x: hidden;
-}
-.container .page2 .frameSeqCon1 .frameSeqCon2 #harmoniaFramesCanvas, .container .page2 .frameSeqCon1 .frameSeqCon2 .frameImg {
-  position: sticky;
-  top: 0;
-  left: 0;
+  margin-right: -50px;
+  padding-right: 50px;
 }
 .container .page2 .frameSeqCon1 .frameImg {
   height: 400px;
