@@ -69,12 +69,13 @@
     }
 
     let loadFrame = _ => {
-        CNTXT.clearRect(0, 0, CANVAS.width, CANVAS.height);
-        CNTXT.drawImage(frameImages[frames.frame], 0, 0);//~
+        // CNTXT.clearRect(0, 0, CANVAS.width, CANVAS.height);
+        // CNTXT.drawImage(frameImages[frames.frame], 0, 0);//~
         // console.log(frameImages[frames.frame])
         console.log('loading')
         // console.log(document.querySelector('.frameSeqCon1'))
         FRAME_IMG.src = `images/harmonia/frames/frame${(frames.frame).toString().padStart(4, '0')}.jpg`;
+        console.log(FRAME_IMG.src)
     };
 
     
@@ -82,18 +83,17 @@
 
     frameImages[0].onload = loadFrame;
 
-
     // frame scrubber~
     gsap.to(frames, {
         frame: totalFrames - 1, 
         snap: "frame", 
         scrollTrigger: {
             // horizontal: true, 
-            // markers: true,
+            markers: true,
             // scroller: ".page3",
             // scroller: ".frameSequence",
             scroller: ".frameSeqCon1",
-            scrub: 0.5//~
+            scrub: 0.75//~
         }, 
         onUpdate: loadFrame
     });

@@ -445,10 +445,17 @@ img.rose {
             text-align: center;
         }
 
+        // .frameSequence {
+        //     height: $frameImgHt * 15;
+        //     .frameImg {
+        //         height: $frameImgHt;
+        //     }
+        // }
+
         .frameSeqCon1 {
             margin-top: 2.5%;
             overflow-y: scroll;
-            height: $frameImgHt; //~
+            height: $frameImgHt;
             overflow-x: hidden;
 
             .frameSeqCon2 {
@@ -467,7 +474,7 @@ img.rose {
                 #harmoniaFramesCanvas, .frameImg {
                     position: sticky;
                     top: 0;
-                    bottom: 0;
+                    left: 0;
                 }
             }
             .frameImg {

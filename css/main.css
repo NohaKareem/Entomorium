@@ -416,7 +416,7 @@ img.rose {
 .container .page2 .frameSeqCon1 .frameSeqCon2 #harmoniaFramesCanvas, .container .page2 .frameSeqCon1 .frameSeqCon2 .frameImg {
   position: sticky;
   top: 0;
-  bottom: 0;
+  left: 0;
 }
 .container .page2 .frameSeqCon1 .frameImg {
   height: 400px;
