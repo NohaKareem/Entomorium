@@ -5,15 +5,16 @@
     const LENS_INFO = document.querySelectorAll('.lensInfo');
     const PAGE_NAV = document.querySelectorAll('.paginationNav li div');
     const PAGES = document.querySelectorAll('.page');
-    
+    const PICTOGRAM = document.querySelector('.logo_pictogram');
+    const SLOW_EASE = "slow(0.7, 0.7, false)";
     let toggleAlpha = [];
 
     let lensTimeline = gsap.timeline();
-    lensTimeline.fromTo(".harmoniaImg", 1.5, { autoAlpha: 0} , { autoAlpha: 1, ease: "slow(0.7, 0.7, false)" });
+    lensTimeline.fromTo(".harmoniaImg", 1.5, { autoAlpha: 0} , { autoAlpha: 1, ease: SLOW_EASE });
     LENSES.forEach(lens => {
 
         // add staggering animation 
-        lensTimeline.fromTo(lens, 0.3, { autoAlpha: 0} , { autoAlpha: 1, ease: "slow(0.7, 0.7, false)" });
+        lensTimeline.fromTo(lens, 0.3, { autoAlpha: 0} , { autoAlpha: 1, ease: SLOW_EASE });
 
         // set visibility toggle
         toggleAlpha.push(1);
@@ -25,7 +26,6 @@
             let currIndex = e.currentTarget.dataset.lensindex;
             gsap.to(LENS_INFO[currIndex], 1.5, { autoAlpha: toggleAlpha[currIndex] });
             toggleAlpha[currIndex] = toggleAlpha[currIndex] ? 0 : 1;
-
         });
     });
 
@@ -55,18 +55,18 @@
     });
 
     let frames = { frame: 0 };
-    let totalFrames = 90; //~
+    let totalFrames = 90; 
     let frameImages = [];
     const FRAME_IMG = document.querySelector('.frameImg');
     const CANVAS = document.querySelector('#harmoniaFramesCanvas');
     const CNTXT = CANVAS.getContext("2d");
 
-    // load images
-    for(let i = 0; i < totalFrames; i++) {
-        let newImg = new Image();
-        newImg.src =  `images/harmonia/frames/frame${(i+1).toString().padStart(4, '0')}.jpg`;
-        frameImages.push(newImg);
-    }
+    // // load images
+    // for(let i = 0; i < totalFrames; i++) {
+    //     let newImg = new Image();
+    //     newImg.src =  `images/harmonia/frames/frame${(i+1).toString().padStart(4, '0')}.jpg`;
+    //     frameImages.push(newImg);
+    // }
 
     let loadFrame = _ => {
         // CNTXT.clearRect(0, 0, CANVAS.width, CANVAS.height);
@@ -81,7 +81,7 @@
     
     // console.log(frameImages)
 
-    frameImages[0].onload = loadFrame;
+    // frameImages[0].onload = loadFrame;
 
     // frame scrubber~
     gsap.to(frames, {
@@ -90,13 +90,22 @@
         scrollTrigger: {
             // horizontal: true, 
             markers: true,
-            // scroller: ".page3",
             // scroller: ".frameSequence",
             scroller: ".frameSeqCon1",
             scrub: 0.75//~
         }, 
-        onUpdate: loadFrame
+        onUpdate: _ => {
+           FRAME_IMG.src = `images/harmonia/frames/frame${(frames.frame).toString().padStart(4, '0')}.jpg`;
+        }
     });
 
+    PICTOGRAM.addEventListener("mouseover", _ => {
+        gsap.to(PICTOGRAM, 1, { rotation: 15, ease: SLOW_EASE } );
+    });
+
+    PICTOGRAM.addEventListener("mouseout", _ => {
+        gsap.to(PICTOGRAM, 1, { rotation: -15, ease: SLOW_EASE } );
+    });
+    
 
 })();

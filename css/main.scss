@@ -445,32 +445,25 @@ img.rose {
             text-align: center;
         }
 
-        // .frameSequence {
-        //     height: $frameImgHt * 15;
-        //     .frameImg {
-        //         height: $frameImgHt;
-        //     }
-        // }
-
         .frameSeqCon1 {
             margin-top: 2.5%;
             overflow-y: scroll;
             height: $frameImgHt;
             overflow-x: hidden;
 
+            // bug menu
+                // margin-bottom: 10%;
+
+                //     margin-bottom: -50px;
+                //     padding-bottom: 50px;
+                
+            
             .frameSeqCon2 {
                 height: 4000px;
                 // height: $frameImgHt + 50;
                 position: relative;
-            
-                // .frameImg {
-                //     // width: $frameImgWid;
-                //     height: $frameImgHt / 1.7;
-                //     position: sticky;
-                //     top: 0;
-                //     left: 0;
-                // }
-
+                overflow-x: hidden;
+        
                 #harmoniaFramesCanvas, .frameImg {
                     position: sticky;
                     top: 0;
@@ -478,7 +471,9 @@ img.rose {
                 }
             }
             .frameImg {
-                height: $frameImgHt;
+                height: $frameImgHt;  position: sticky;
+                top: 0;
+                left: 0;
             }
         }
     }
