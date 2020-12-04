@@ -370,34 +370,53 @@ img.rose {
                     transform: rotate(30deg);
                 }
 
-                .lens1 { // antenna
+                .lens0 { // antenna
                     top: 60px;
                     left: 330px;
                 }
-                
-                .lens2 { // eye
+
+                .info0 { // antenna
+                    top: 50px;
+                    left: 230px;
+                }
+
+                .lens1 { // eye
                     top: 110px;
                     left: 355px;
                 }
 
-                .lens3 { // prosternum
+                .info1 {
+                    top: 100px;
+                    left: 340px;
+                }
+
+                .lens2 { // prosternum
                     top: 150px;
                     left: 360px;
                 }
 
-                .lens4 { // prosternal keel
+                .info2 {
+                    top: 140px;
+                    left: 260px;
+                }
+
+                .lens3 { // prosternal keel
                     top: 180px;
                     left: 390px;
                 }
 
+                .info3 {
+                    top: 170px;
+                    left: 290px;
+                }
+
+
                 .lensInfo {
                     visibility: hidden;
                     position: absolute;
-                    top: 50px;
-                    left: 230px;
-                    background-color: $paleParchment;
+                    background-color: transparentize($paleParchment, 0.4);
+                    border-radius: 10px;
                     padding: 5px;
-                    z-index: -1;
                     font-size: $h4Size / 1.4;
                     h4 {
                         font-family: 'Open Sans', sans-serif;

@@ -2,21 +2,32 @@
     "use strict";
     
     const LENSES = document.querySelectorAll('.lens');
-    const LENS_INFO = document.querySelector('.lensInfo');
+    const LENS_INFO = document.querySelectorAll('.lensInfo');
+    // const LENS_INFO = document.querySelector('.lensInfo');
     const PAGE_NAV = document.querySelectorAll('.paginationNav li div');
     const PAGES = document.querySelectorAll('.page');
     
-    let toggleAlpha = 1;
+    let toggleAlpha = [];
+    // let toggleAlpha = 1;
 
     // show info box on click
     LENSES.forEach(lens => {
-        lens.addEventListener("click", _ => {
-            // LENS_INFO.top = lens.top - 10;
-            // console.log(document.querySelector('.lens1'))
-            // LENS_INFO.left = lens.left - 100;
+        toggleAlpha.push(1);
+        lens.addEventListener("click", e => {
+
             // console.log(lens.left)
-            gsap.to(LENS_INFO, 1.5, { autoAlpha: toggleAlpha });
-            toggleAlpha = toggleAlpha ? 0 : 1;
+            let currIndex = e.currentTarget.dataset.lensindex;
+            console.log(currIndex)
+            console.log(LENS_INFO[currIndex])
+            gsap.to(LENS_INFO[currIndex], 1.5, { autoAlpha: toggleAlpha[currIndex] });
+            toggleAlpha[currIndex] = toggleAlpha[currIndex] ? 0 : 1;
+
+            // console.log('stule')
+            // LENS_INFO[currIndex].style.top = lens.style.top - 10;
+            // console.log(LENS_INFO[currIndex].style.top)
+            // console.log(lens.style.top)
+            // console.log(window.getComputedStyle(lens).getPropertyValue('top'))
+            // LENS_INFO[currIndex].style.left = lens.style.left - 100;
         });
     });
 
@@ -75,7 +86,7 @@
         snap: "frame", 
         scrollTrigger: {
             // horizontal: true, 
-            markers: true,
+            // markers: true,
             // scroller: ".page3",
             // scroller: ".frameSequence",
             // scroller: ".frameSeqCon1",

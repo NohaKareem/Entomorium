@@ -290,30 +290,44 @@ img.rose {
   cursor: pointer;
   transform: rotate(30deg);
 }
-.container .paginationCon .page1 .harmoniaAnatomy1 .lens1 {
+.container .paginationCon .page1 .harmoniaAnatomy1 .lens0 {
   top: 60px;
   left: 330px;
 }
-.container .paginationCon .page1 .harmoniaAnatomy1 .lens2 {
+.container .paginationCon .page1 .harmoniaAnatomy1 .info0 {
+  top: 50px;
+  left: 230px;
+}
+.container .paginationCon .page1 .harmoniaAnatomy1 .lens1 {
   top: 110px;
   left: 355px;
 }
-.container .paginationCon .page1 .harmoniaAnatomy1 .lens3 {
+.container .paginationCon .page1 .harmoniaAnatomy1 .info1 {
+  top: 100px;
+  left: 340px;
+}
+.container .paginationCon .page1 .harmoniaAnatomy1 .lens2 {
   top: 150px;
   left: 360px;
 }
-.container .paginationCon .page1 .harmoniaAnatomy1 .lens4 {
+.container .paginationCon .page1 .harmoniaAnatomy1 .info2 {
+  top: 140px;
+  left: 260px;
+}
+.container .paginationCon .page1 .harmoniaAnatomy1 .lens3 {
   top: 180px;
   left: 390px;
+}
+.container .paginationCon .page1 .harmoniaAnatomy1 .info3 {
+  top: 170px;
+  left: 290px;
 }
 .container .paginationCon .page1 .harmoniaAnatomy1 .lensInfo {
   visibility: hidden;
   position: absolute;
-  top: 50px;
-  left: 230px;
-  background-color: #FDFDEC;
+  background-color: rgba(253, 253, 236, 0.6);
+  border-radius: 10px;
   padding: 5px;
-  z-index: -1;
   font-size: 25px;
 }
 .container .paginationCon .page1 .harmoniaAnatomy1 .lensInfo h4 {
