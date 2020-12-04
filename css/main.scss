@@ -370,45 +370,41 @@ img.rose {
                     transform: rotate(30deg);
                 }
 
-                .lens0 { // antenna
-                    top: 60px;
-                    left: 330px;
-                }
+                // antenna
+                .lens0 { top: 60px; left: 330px; }
+                .info0 {  top: 50px; left: 235px; }
+                
+                // eye 
+                .lens1 { top: 110px; left: 355px; }
+                .info1 { top: 100px; left: 315px; }
+                
+                // prosternum 
+                .lens2 { top: 150px; left: 360px; }
+                .info2 { top: 140px; left: 223px; }
+                
+                // prosternal keel
+                .lens3 { top: 180px; left: 390px; }
+                .info3 { top: 170px; left: 220px; }
+                
+                // femur
+                .lens4 { top: 320px; left: 470px; }
+                .info4 { top: 310px; left: 395px; }
 
-                .info0 { // antenna
-                    top: 50px;
-                    left: 230px;
-                }
+                // first abdominal segment
+                .lens5 { top: 180px; left: 390px; }
+                .info5 { top: 170px; left: 290px; }
+                
+                // tibia
+                .lens6 { top: 180px; left: 390px; }
+                .info6 { top: 170px; left: 290px; }
 
-                .lens1 { // eye
-                    top: 110px;
-                    left: 355px;
-                }
+                // tarsus
+                .lens7 { top: 180px; left: 390px; }
+                .info7 { top: 170px; left: 290px; }
 
-                .info1 {
-                    top: 100px;
-                    left: 340px;
-                }
-
-                .lens2 { // prosternum
-                    top: 150px;
-                    left: 360px;
-                }
-
-                .info2 {
-                    top: 140px;
-                    left: 260px;
-                }
-
-                .lens3 { // prosternal keel
-                    top: 180px;
-                    left: 390px;
-                }
-
-                .info3 {
-                    top: 170px;
-                    left: 290px;
-                }
+                // sixth abdominal segment
+                .lens8 { top: 180px; left: 390px; }
+                .info8 { top: 170px; left: 290px; }
 
                 .lensInfo {
                     visibility: hidden;
