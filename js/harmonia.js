@@ -24,17 +24,9 @@
 
             // console.log(lens.left)
             let currIndex = e.currentTarget.dataset.lensindex;
-            console.log(currIndex)
-            console.log(LENS_INFO[currIndex])
             gsap.to(LENS_INFO[currIndex], 1.5, { autoAlpha: toggleAlpha[currIndex] });
             toggleAlpha[currIndex] = toggleAlpha[currIndex] ? 0 : 1;
 
-            // console.log('stule')
-            // LENS_INFO[currIndex].style.top = lens.style.top - 10;
-            // console.log(LENS_INFO[currIndex].style.top)
-            // console.log(lens.style.top)
-            // console.log(window.getComputedStyle(lens).getPropertyValue('top'))
-            // LENS_INFO[currIndex].style.left = lens.style.left - 100;
         });
     });
 

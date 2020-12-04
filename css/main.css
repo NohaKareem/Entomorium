@@ -257,6 +257,10 @@ img.rose {
   overflow-x: hidden;
 }
 
+.caption {
+  font-size: 15px;
+}
+
 .container h2 {
   text-align: left;
   margin-left: 15%;
@@ -269,6 +273,11 @@ img.rose {
 }
 .container .paginationCon .page {
   margin: 0 5%;
+}
+.container .paginationCon .page1 .caption {
+  margin: 0 auto;
+  text-align: center;
+  margin-left: -10%;
 }
 .container .paginationCon .page1 .harmoniaAnatomy1 {
   position: relative;
