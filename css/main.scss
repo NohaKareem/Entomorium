@@ -335,7 +335,7 @@ img.rose {
 
         .page {
             margin: 0 5%;
-            // height: 40vh;//40vh;//~
+            // height: 60vh;//40vh;//~
         }
 
         .page1 {
@@ -400,22 +400,29 @@ img.rose {
                     z-index: -1;
                 }
             }
-            .frameImg {
-                height: $frameImgHt;
-            }
+            // .frameImg {
+            //     height: $frameImgHt;
+            // }
             .frameSeqCon1 {
                 overflow-y: scroll;
-                height: $frameImgHt; //~
+                height: $frameImgHt / 1.7; //~
                 overflow-x: hidden;
                 .frameSeqCon2 {
-                    height: 40000px;
+                    height: 4000px;
+                    // height: $frameImgHt + 50;
                     position: relative;
-                    .frameImg {
-                        // width: $frameImgWid;
-                        height: $frameImgHt;
+                    // .frameImg {
+                    //     // width: $frameImgWid;
+                    //     height: $frameImgHt / 1.7;
+                    //     position: sticky;
+                    //     top: 0;
+                    //     left: 0;
+                    // }
+
+                    #harmoniaFramesCanvas, .frameImg {
                         position: sticky;
                         top: 0;
-                        left: 0;
+                        bottom: 0;
                     }
                 }
             }
@@ -451,13 +458,18 @@ img.rose {
 
         ul.paginationNav {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-items: center;
             align-items: center;
             position: fixed;
+            // margin-top: -550px;//-25%;
+            top: 35%;
+            left: 5%;
             // bottom: -5%;
             // bottom: -5px;
             z-index: 5;
+            // margin-top: -3%;
+
 
             li div {
                 background-color: $inkyJetChracoal;
@@ -466,6 +478,10 @@ img.rose {
                 border-radius: 50%;
                 border: 1px solid $inkyJetChracoal;
                 margin: 15px;
+            }
+
+            li div.selected {
+                background-color: $paleParchment;
             }
 
             li div:hover {
