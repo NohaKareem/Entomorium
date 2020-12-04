@@ -44,10 +44,11 @@
                     page.classList.remove('hidden');
                     
                     // restart animation
-                    if (j == 0) {
+                    if (j == 0) 
                         lensTimeline.restart();
-                    }
-                }
+                    else if (j == 1)
+                        gsap.fromTo(FRAME_IMG, 2, { autoAlpha: 0} , { autoAlpha: 1, ease: SLOW_EASE })
+                 }
                 else 
                     page.classList.add('hidden');
             });
@@ -78,6 +79,7 @@
         console.log(FRAME_IMG.src)
     };
 
+
     
     // console.log(frameImages)
 
@@ -106,6 +108,4 @@
     PICTOGRAM.addEventListener("mouseout", _ => {
         gsap.to(PICTOGRAM, 1, { rotation: -15, ease: SLOW_EASE } );
     });
-    
-
 })();
