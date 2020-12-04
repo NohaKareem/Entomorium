@@ -45,10 +45,14 @@
                     page.classList.remove('hidden');
                     
                     // restart animation
-                    if (j == 0) 
+                    if (j == 0) {
                         lensTimeline.restart();
-                    else if (j == 1)
+                    } else if (j == 1){
                         gsap.fromTo(FRAME_IMG, 2, { autoAlpha: 0} , { autoAlpha: 1, y: 10, ease: SLOW_EASE })
+                        
+                        // refresh to fix trigger bug https://stackoverflow.com/a/64669108
+                        ScrollTrigger.refresh();
+                    }
                  }
                 else 
                     page.classList.add('hidden');
@@ -63,6 +67,7 @@
     let totalFrames = 90; 
     const FRAME_IMG = document.querySelector('.frameImg');
 
+    gsap.registerPlugin(ScrollTrigger);
     gsap.to(frames, {
         frame: totalFrames - 1, 
         snap: "frame", 
