@@ -155,7 +155,7 @@ button {
 }
 
 button:hover {
-  color: #FDFDEC;
+  color: transparent;
   background-color: #10061A;
   cursor: pointer;
 }
@@ -278,10 +278,11 @@ img.rose {
   position: relative;
 }
 .container .paginationCon .page1 .ar model-viewer {
-  margin-top: 2.5%;
+  margin-top: 1.5%;
   height: 35vh;
   width: 100vw;
   height: 70vh;
+  --poster-color: $paleParchment;
 }
 .container .paginationCon .page1 .ar .overlayText {
   position: absolute;
@@ -302,8 +303,8 @@ img.rose {
 .container .paginationCon .page2 .caption {
   margin: 0 auto;
   text-align: center;
-  margin-left: -10%;
-  margin-top: -30px;
+  margin-left: -5%;
+  margin-top: 30px;
 }
 .container .paginationCon .page2 .harmoniaAnatomy1 {
   position: relative;
@@ -423,8 +424,7 @@ img.rose {
   margin-top: 2.5%;
 }
 .container .page3 .caption {
-  margin-top: 2.5%;
-  text-align: center;
+  margin-top: 30px;
 }
 .container .page3 .frameSeqCon1 {
   margin-top: 2.5%;
@@ -477,7 +477,7 @@ img.rose {
   margin: 15px;
 }
 .container nav ul.paginationNav li div.selected {
-  background-color: #FDFDEC;
+  background-color: transparent;
 }
 footer ul {
   display: flex;

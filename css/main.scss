@@ -196,7 +196,7 @@ button {
 }
 
 button:hover {
-    color: $paleParchment;
+    color: transparent;//~
     background-color: $inkyJetChracoal;
     cursor: pointer;
     // @include insetShadow();
@@ -340,10 +340,13 @@ img.rose {
             .ar {
                 position: relative;
                 model-viewer {
-                    margin-top: 2.5%;
+                    margin-top: 1.5%;
                     height: 35vh;
                     width: 100vw;
                     height: 70vh;
+
+                    // model-viewer attributes https://modelviewer.dev/docs/
+                    --poster-color: $paleParchment;
                 }
                 .overlayText {
                     position: absolute;
@@ -369,8 +372,8 @@ img.rose {
             .caption {
                 margin: 0 auto;
                 text-align: center;
-                margin-left: -10%;
-                margin-top: $marginShift - 10;
+                margin-left: -5%;
+                margin-top: $marginShift * -1.5;//- 10;
             }
 
             .harmoniaAnatomy1 {
@@ -467,8 +470,9 @@ img.rose {
 
     .page3 {
         .caption {
-            margin-top: 2.5%;
-            text-align: center;
+            // margin-top: 2.5%;
+            margin-top: $marginShift * -1.5;
+            // text-align: center;
         }
 
         .frameSeqCon1 {
@@ -527,7 +531,7 @@ img.rose {
             }
 
             li div.selected {
-                background-color: $paleParchment;
+                background-color: transparent;
             }
 
             li div:hover {
