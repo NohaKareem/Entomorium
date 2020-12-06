@@ -318,6 +318,7 @@ img.rose {
 
 .caption {
     font-size: $pSize / 2;
+    text-align: center;
 }
 
 .container {
@@ -336,6 +337,31 @@ img.rose {
         }
 
         .page1 {
+            .ar {
+                position: relative;
+                model-viewer {
+                    margin-top: 2.5%;
+                    height: 35vh;
+                    width: 100vw;
+                    height: 70vh;
+                }
+                .overlayText {
+                    position: absolute;
+                    z-index: 2;
+                    top: 10%;
+                    left: 15%;
+                    width: 25%;
+                    padding: 1.5%;
+                    font-size: $pSize / 1.5;
+                    background-color: transparentize($paleParchment, 0.4);
+                }
+            }
+            .caption {
+                margin-top: 1.5%;
+            }
+        }
+
+        .page2 {
             h2 {
                 margin-left: -5%;
             }
@@ -423,7 +449,7 @@ img.rose {
         }
     }
 
-    .page3 {
+    .page4 {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -439,7 +465,7 @@ img.rose {
         }
     }
 
-    .page2 {
+    .page3 {
         .caption {
             margin-top: 2.5%;
             text-align: center;

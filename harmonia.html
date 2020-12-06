@@ -11,6 +11,15 @@
 
         <link href="css/reset.css" rel="stylesheet" type="text/css">
         <link href="css/main.css" rel="stylesheet" type="text/css">
+
+        <!-- 3D model viewer -->
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+        <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- GreenSock -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
@@ -25,6 +34,25 @@
             <div class="harmoniaCon">
                 <main class="paginationCon">
                     <section class="page page1">
+                        <h2>3D/AR exploration</h2>
+                        <section class="ar">
+                            <h2 class="hidden">3D/AR model viewer</h2>
+                            <!-- <model-viewer src="assets/harmonia.gltf" alt="Harmonia Axyridis 3D model"
+                                auto-rotate camera-controls autoplay
+                                poster="images/harmonia_transparent.png"
+                                ar ar-modes="webxr scene-viewer"
+                                ar-scale="auto" ios-src="assets/harmonia.usdz">
+                            </model-viewer>   -->
+                            <model-viewer src="assets/harmonia.glb" camera-controls exposure="1.74" shadow-intensity="0" shadow-softness="0.25" environment-image="assets/spruit_sunrise_1k_HDR.hdr" skybox-image="assets/spruit_sunrise_1k_HDR.hdr" auto-rotate camera-target="-4.768e-7m -0.01m 0.03851m">
+
+                            </model-viewer>
+                            <p class="overlayText">
+                                ~Harmonia Axyridis, commonly known as a lady bug, or lady beetle.
+                            </p>
+                        </section>
+                        <p class="caption">Explore the Harmonia Axyridis in 3D</p>
+                    </section>
+                    <section class="page page2 hidden">
                         <h2>Anatomy</h2>
                         <section class="anatomy harmoniaAnatomy1">
                             <img src="images/harmonia/harmonia_bottom.png" class="harmoniaImg" alt="Harmonia Axyridis bottom anatomy">
@@ -49,7 +77,7 @@
                         </section>
                         <p class="caption">click on a magnifying lens for the anatomy label</p>
                     </section>
-                    <section class="page page2 hidden">
+                    <section class="page page3 hidden">
                         <h2>Interactive Anatomy</h2>
                         <section class="frameSequence">
                             <h2 class="hidden">Interactive anatomy container</h2>
@@ -60,19 +88,16 @@
                                         </div>
                                  </div> 
                             </div>    
+                        </section>
+                        <p class="caption">scroll for an interactive anatomy expansion</p>
                     </section>
-                    <p class="caption">scroll for an interactive anatomy expansion</p>
-                </section>
-                <nav>
-                    <ul class="paginationNav">
-                        <li>
-                            <div></div>
-                        </li>
-                        <li>
-                            <div></div>
-                        </li>
-                    </ul>
-                </nav>
+                    <nav>
+                        <ul class="paginationNav">
+                            <li><div></div></li>
+                            <li><div></div></li>
+                            <li><div></div></li>
+                        </ul>
+                    </nav>
                 </main>
             </div>
         </div>
