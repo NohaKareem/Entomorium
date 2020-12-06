@@ -88,4 +88,22 @@
     PICTOGRAM.addEventListener("mouseout", _ => {
         gsap.to(PICTOGRAM, 1, { rotation: -15, ease: SLOW_EASE } );
     });
+
+    const MODEL_VIEWER = document.querySelector('model-viewer');
+    const OVERLAY_TEXT = document.querySelector('.overlayText');
+    
+    // show text on load
+    MODEL_VIEWER.addEventListener("model-visibility", e => {
+        if (e.detail.visible) {
+            gsap.fromTo(OVERLAY_TEXT, 3, { autoAlpha: 0} , { autoAlpha: 1, ease: SLOW_EASE })
+            OVERLAY_TEXT.classList.remove('hidden');
+        }
+    });
+
+    // hide text on progress
+    MODEL_VIEWER.addEventListener("progress", _ => {
+        OVERLAY_TEXT.classList.add('hidden');
+    });
+
+    
 })();
