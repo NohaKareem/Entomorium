@@ -116,14 +116,13 @@
     let isScrubbing = false;
     let start = 0, end = xrayCon.offsetWidth;
     
-    imgScrubber.addEventListener('mousedown', _ => { isScrubbing = true; });//~
-    document.addEventListener('mouseup', _ => { isScrubbing = false; });//~
+    imgScrubber.addEventListener('mousedown', _ => { isScrubbing = true; });
+    document.addEventListener('mouseup', _ => { isScrubbing = false; });
     document.addEventListener('mousemove', e => { 
         if(isScrubbing) {
             let x = e.clientX - xrayCon.getBoundingClientRect().left;
-            // console.log(x)
             if(x < start) { x = start; }
-            else if (x > end) { x = end - 2; }
+            else if (x > end) { x = end; } //~ - 2
             
             imgScrubber.style.left = x + 'px';
             imgTop.style.width = x + 'px';

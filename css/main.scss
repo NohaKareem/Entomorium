@@ -536,9 +536,11 @@ img.rose {
                 // height: ;
                    
                     &.imgScrubber {
-                        background-color: red;//~
+                        background-color: transparentize($inkyJetChracoal, 0.5);//~
                         left: 50%;
-                        width: 2px;//~
+                        width: 10px;//~
+                        height: 720px;
+                        border-radius: 20px;
                         cursor: pointer;
                     }
                 }

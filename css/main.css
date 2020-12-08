@@ -478,9 +478,11 @@ img.rose {
   height: 720px;
 }
 .container .page5 .xrayConCon .xrayCon .xrayImg.imgScrubber {
-  background-color: red;
+  background-color: rgba(16, 6, 26, 0.5);
   left: 50%;
-  width: 2px;
+  width: 10px;
+  height: 720px;
+  border-radius: 20px;
   cursor: pointer;
 }
 .container .page5 .xrayConCon .imgBottom {
