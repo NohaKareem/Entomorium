@@ -15,6 +15,7 @@ $frameImgWid: 700px;
 $frameImgHt: 400px;
 $marginShift: -20px;
 $imgWidth: 1280px;
+$imgHeight: 720px;
 
 @mixin insetShadow {
     // box-shadow: inset -3px -3px 10px 0.5px lighten($chlorophyllGreen, 0.5),
@@ -27,7 +28,7 @@ iframe {
 //   margin-top: -30%;
     margin-top: 2.5%;
     width: $imgWidth / 1.5;
-    height: 500px;
+    height: $imgHeight - 200;
 }
 
 // hide without display property, since it's overriden by grid 
@@ -522,25 +523,25 @@ img.rose {
     }
     .page5 {
         .xrayConCon {
-            width: imgWidth;//50vw;//900px;
+            width: $imgWidth;//50vw;//900px;
             margin: 0 auto;
             .xrayCon {
                 position: relative;
-                width: imgWidth;//50vw;//900px;//~
-                height: 720px;//400px;
+                width: $imgWidth;//50vw;//900px;//~
+                height: $imgHeight;//400px;
                 transform: scale(0.75);
                 // background-color: red;
                 .xrayImg {
                     position: absolute;
-                    width: imgWidth;//50vw;//900px;
-                    height: 720px;//400px;
+                    width: $imgWidth;//50vw;//900px;
+                    height: $imgHeight;//400px;
                 // height: ;
                    
                     &.imgScrubber {
                         background-color: transparentize($inkyJetChracoal, 0.5);//~
                         left: 50%;
                         width: 10px;//~
-                        height: 720px;
+                        height: $imgHeight;
                         border-radius: 20px;
                         cursor: pointer;
                     }
