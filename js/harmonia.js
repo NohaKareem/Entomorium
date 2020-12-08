@@ -116,7 +116,8 @@
     let isScrubbing = false;
     let start = 0, end = xrayCon.offsetWidth;
     
-    imgScrubber.addEventListener('click', _ => { isScrubbing = !isScrubbing; });//~
+    imgScrubber.addEventListener('mousedown', _ => { isScrubbing = true; });//~
+    document.addEventListener('mouseup', _ => { isScrubbing = false; });//~
     document.addEventListener('mousemove', e => { 
         if(isScrubbing) {
             let x = e.clientX - xrayCon.getBoundingClientRect().left;
