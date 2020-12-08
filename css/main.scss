@@ -14,6 +14,7 @@ $h4Size: 35px;
 $frameImgWid: 700px;
 $frameImgHt: 400px;
 $marginShift: -20px;
+$imgWidth: 1280px;
 
 @mixin insetShadow {
     // box-shadow: inset -3px -3px 10px 0.5px lighten($chlorophyllGreen, 0.5),
@@ -21,12 +22,12 @@ $marginShift: -20px;
         inset 3px 3px 10px 0.5px transparentize($inkyJetChracoal, 0.9);  
 }
 
-iframe ///~
-{
+iframe {
   /* //1290px; 720px*/
-    width: 2000px;
-    height: 2000px;
-//   border: 2px solid red;
+//   margin-top: -30%;
+    margin-top: 2.5%;
+    width: $imgWidth / 1.5;
+    height: 500px;
 }
 
 // hide without display property, since it's overriden by grid 
@@ -521,17 +522,17 @@ img.rose {
     }
     .page5 {
         .xrayConCon {
-            width: 1280px;//50vw;//900px;
+            width: imgWidth;//50vw;//900px;
             margin: 0 auto;
             .xrayCon {
                 position: relative;
-                width: 1280px;//50vw;//900px;//~
+                width: imgWidth;//50vw;//900px;//~
                 height: 720px;//400px;
                 transform: scale(0.75);
                 // background-color: red;
                 .xrayImg {
                     position: absolute;
-                    width: 1280px;//50vw;//900px;
+                    width: imgWidth;//50vw;//900px;
                     height: 720px;//400px;
                 // height: ;
                    

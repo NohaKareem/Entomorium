@@ -1,7 +1,8 @@
 iframe {
   /* //1290px; 720px*/
-  width: 2000px;
-  height: 2000px;
+  margin-top: 2.5%;
+  width: 853.3333333333px;
+  height: 500px;
 }
 
 .hidden {
@@ -463,18 +464,18 @@ img.rose {
   left: 0;
 }
 .container .page5 .xrayConCon {
-  width: 1280px;
+  width: imgWidth;
   margin: 0 auto;
 }
 .container .page5 .xrayConCon .xrayCon {
   position: relative;
-  width: 1280px;
+  width: imgWidth;
   height: 720px;
   transform: scale(0.75);
 }
 .container .page5 .xrayConCon .xrayCon .xrayImg {
   position: absolute;
-  width: 1280px;
+  width: imgWidth;
   height: 720px;
 }
 .container .page5 .xrayConCon .xrayCon .xrayImg.imgScrubber {
