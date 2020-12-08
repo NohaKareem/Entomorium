@@ -371,13 +371,16 @@ img.rose {
                 margin-top: 1.5%;
             }
         }
-        .page2 { //~
-            width: 100vw;//~
-            height: 70vh;
-            border: green 2px solid;
+        // word tree
+        .page2 { 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            
             .wordTree {
-                border: 2px red solid;
-                width: 100vw;
+                margin-top: 0%;
+                width: 50vw;
             }
         }
         .page3 {

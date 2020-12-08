@@ -303,13 +303,14 @@ img.rose {
   margin-top: 1.5%;
 }
 .container .paginationCon .page2 {
-  width: 100vw;
-  height: 70vh;
-  border: green 2px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
 }
 .container .paginationCon .page2 .wordTree {
-  border: 2px red solid;
-  width: 100vw;
+  margin-top: 0%;
+  width: 50vw;
 }
 .container .paginationCon .page3 h2 {
   margin-left: -5%;

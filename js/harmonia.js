@@ -135,36 +135,37 @@
     let data;
     function renderWordTree() {//~
         data = google.visualization.arrayToDataTable(
-            [   ['id', 'childLabel', 'parent', 'size', { role: 'style'}],
-                [0, 'Arthropoda', -1, 1, 'black'],
-                [1, 'Insecta', 0, 1, 'black'],
-                [2, 'Coleoptera', 1, 1, 'black'],
-                [3, 'Harmonia Axyridis', 2, 1, 'black'],
+            [   ['id', 'childLabel', 'parent', 'size'],//, { role: 'style'}
+                [0, 'Arthropoda', -1, 1],//'black'
+                [1, 'Insecta', 0, 1],//'black'
+                [2, 'Coleoptera', 1, 1],//'black'
+                [3, 'Harmonia Axyridis', 2, 1],//'black'
 
-                [4, 'Coccinella 22-Punctata', 2, 1, 'black'],
+                [4, 'Coccinella 22-Punctata', 2, 1],//'black'
 
-                [5, 'Chrysomela Cerealis', 2, 1, 'black'],
+                [5, 'Chrysomela Cerealis', 2, 1],//'black'
 
-                [6, 'Lepidoptera', 1, 1, 'black'],
-                [7, 'Gonepteryx Merula', 6, 1, 'black'],
-                [8, 'Vanessa Cardui', 6, 1, 'black'],
+                [6, 'Lepidoptera', 1, 1],//'black'
+                [7, 'Gonepteryx Merula', 6, 1],//'black'
+                [8, 'Vanessa Cardui', 6, 1],//'black'
                 
-                [9, 'Nymphalis Phoroys', 6, 1, 'black']
-            ]
+                [9, 'Nymphalis Phoroys', 6, 1]//'black'  
+          ]
         );
 
         let options = {
-            colors: ['black', 'red', 'green'],//~
+            colors: ['black', 'red', 'red'],//~
+            backgroundColor: 'transparent',
+            fontName: 'Open Sans', 
             wordtree: {
                 format: 'explicit',
-                backgroundColor: '#FDFDEC',
                 type: 'suffix'
             }
         };
 
-        console.log(google.visualization)
         let wordTreeVis = new google.visualization.WordTree(document.querySelector('.wordTree'));
         wordTreeVis.draw(data, options);
+        console.log(options)
     } 
 
 })();
