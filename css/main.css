@@ -1,3 +1,10 @@
+iframe {
+  /* //1290px; 720px*/
+  margin-top: 2.5%;
+  width: 853.3333333333px;
+  height: 500px;
+}
+
 .hidden {
   position: absolute !important;
   top: -9999px !important;
@@ -155,7 +162,7 @@ button {
 }
 
 button:hover {
-  color: #FDFDEC;
+  color: transparent;
   background-color: #10061A;
   cursor: pointer;
 }
@@ -259,6 +266,7 @@ img.rose {
 
 .caption {
   font-size: 15px;
+  text-align: center;
 }
 
 .container h2 {
@@ -273,109 +281,141 @@ img.rose {
 .container .paginationCon .page {
   margin: 0 5%;
 }
-.container .paginationCon .page1 h2 {
-  margin-left: -5%;
+.container .paginationCon .page1 .ar {
+  position: relative;
+}
+.container .paginationCon .page1 .ar model-viewer {
+  margin-top: 1.5%;
+  width: 100vw;
+  height: 70vh;
+  --poster-color: $paleParchment;
+}
+.container .paginationCon .page1 .ar .overlayText {
+  position: absolute;
+  z-index: 2;
+  top: 10%;
+  left: 10%;
+  width: 25%;
+  padding: 1.5%;
+  font-size: 20px;
+  background-color: rgba(253, 253, 236, 0.6);
 }
 .container .paginationCon .page1 .caption {
+  margin-top: 1.5%;
+}
+.container .paginationCon .page2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+.container .paginationCon .page2 .wordTree {
+  margin-top: 0%;
+  width: 60vw;
+}
+.container .paginationCon .page3 h2 {
+  margin-left: -5%;
+}
+.container .paginationCon .page3 .caption {
   margin: 0 auto;
   text-align: center;
-  margin-left: -10%;
-  margin-top: -30px;
+  margin-left: -5%;
+  margin-top: 30px;
 }
-.container .paginationCon .page1 .harmoniaAnatomy1 {
+.container .paginationCon .page3 .harmoniaAnatomy1 {
   position: relative;
   max-width: 1000px;
   margin-top: -20px;
 }
-.container .paginationCon .page1 .harmoniaAnatomy1 .harmoniaImg {
+.container .paginationCon .page3 .harmoniaAnatomy1 .harmoniaImg {
   position: relative;
   margin-left: -80px;
   max-width: 1000px;
 }
-.container .paginationCon .page1 .harmoniaAnatomy1 .lensCon {
+.container .paginationCon .page3 .harmoniaAnatomy1 .lensCon {
   position: absolute;
 }
-.container .paginationCon .page1 .harmoniaAnatomy1 .lens {
+.container .paginationCon .page3 .harmoniaAnatomy1 .lens {
   width: 50px;
   transition: transform 1s ease-in-out;
 }
-.container .paginationCon .page1 .harmoniaAnatomy1 .lens:hover {
+.container .paginationCon .page3 .harmoniaAnatomy1 .lens:hover {
   cursor: pointer;
   transform: rotate(30deg);
 }
-.container .paginationCon .page1 .harmoniaAnatomy1 .lens0 {
+.container .paginationCon .page3 .harmoniaAnatomy1 .lens0 {
   top: 60px;
   left: 330px;
 }
-.container .paginationCon .page1 .harmoniaAnatomy1 .info0 {
+.container .paginationCon .page3 .harmoniaAnatomy1 .info0 {
   top: 50px;
   left: 235px;
 }
-.container .paginationCon .page1 .harmoniaAnatomy1 .lens1 {
+.container .paginationCon .page3 .harmoniaAnatomy1 .lens1 {
   top: 110px;
   left: 355px;
 }
-.container .paginationCon .page1 .harmoniaAnatomy1 .info1 {
+.container .paginationCon .page3 .harmoniaAnatomy1 .info1 {
   top: 100px;
   left: 315px;
 }
-.container .paginationCon .page1 .harmoniaAnatomy1 .lens2 {
+.container .paginationCon .page3 .harmoniaAnatomy1 .lens2 {
   top: 150px;
   left: 360px;
 }
-.container .paginationCon .page1 .harmoniaAnatomy1 .info2 {
+.container .paginationCon .page3 .harmoniaAnatomy1 .info2 {
   top: 140px;
   left: 223px;
 }
-.container .paginationCon .page1 .harmoniaAnatomy1 .lens3 {
+.container .paginationCon .page3 .harmoniaAnatomy1 .lens3 {
   top: 180px;
   left: 390px;
 }
-.container .paginationCon .page1 .harmoniaAnatomy1 .info3 {
+.container .paginationCon .page3 .harmoniaAnatomy1 .info3 {
   top: 170px;
   left: 220px;
 }
-.container .paginationCon .page1 .harmoniaAnatomy1 .lens4 {
+.container .paginationCon .page3 .harmoniaAnatomy1 .lens4 {
   top: 320px;
   left: 470px;
 }
-.container .paginationCon .page1 .harmoniaAnatomy1 .info4 {
+.container .paginationCon .page3 .harmoniaAnatomy1 .info4 {
   top: 310px;
   left: 395px;
 }
-.container .paginationCon .page1 .harmoniaAnatomy1 .lens5 {
+.container .paginationCon .page3 .harmoniaAnatomy1 .lens5 {
   top: 320px;
   left: 390px;
 }
-.container .paginationCon .page1 .harmoniaAnatomy1 .info5 {
+.container .paginationCon .page3 .harmoniaAnatomy1 .info5 {
   top: 310px;
   left: 110px;
 }
-.container .paginationCon .page1 .harmoniaAnatomy1 .lens6 {
+.container .paginationCon .page3 .harmoniaAnatomy1 .lens6 {
   top: 400px;
   left: 510px;
 }
-.container .paginationCon .page1 .harmoniaAnatomy1 .info6 {
+.container .paginationCon .page3 .harmoniaAnatomy1 .info6 {
   top: 390px;
   left: 455px;
 }
-.container .paginationCon .page1 .harmoniaAnatomy1 .lens7 {
+.container .paginationCon .page3 .harmoniaAnatomy1 .lens7 {
   top: 450px;
   left: 530px;
 }
-.container .paginationCon .page1 .harmoniaAnatomy1 .info7 {
+.container .paginationCon .page3 .harmoniaAnatomy1 .info7 {
   top: 440px;
   left: 455px;
 }
-.container .paginationCon .page1 .harmoniaAnatomy1 .lens8 {
+.container .paginationCon .page3 .harmoniaAnatomy1 .lens8 {
   top: 430px;
   left: 390px;
 }
-.container .paginationCon .page1 .harmoniaAnatomy1 .info8 {
+.container .paginationCon .page3 .harmoniaAnatomy1 .info8 {
   top: 420px;
   left: 100px;
 }
-.container .paginationCon .page1 .harmoniaAnatomy1 .lensInfo {
+.container .paginationCon .page3 .harmoniaAnatomy1 .lensInfo {
   visibility: hidden;
   position: absolute;
   background-color: rgba(253, 253, 236, 0.6);
@@ -383,10 +423,10 @@ img.rose {
   padding: 5px;
   font-size: 25px;
 }
-.container .paginationCon .page1 .harmoniaAnatomy1 .lensInfo h4 {
+.container .paginationCon .page3 .harmoniaAnatomy1 .lensInfo h4 {
   font-family: "Open Sans", sans-serif;
 }
-.container .page3 {
+.container .page5 {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -394,35 +434,64 @@ img.rose {
   align-items: center;
   margin-top: 5%;
 }
-.container .page3 .xray {
+.container .page5 .xray {
   max-width: 100%;
   height: 400px;
   margin-top: 2.5%;
 }
-.container .page2 .caption {
-  margin-top: 2.5%;
-  text-align: center;
+.container .page4 .caption {
+  margin-top: 30px;
 }
-.container .page2 .frameSeqCon1 {
+.container .page4 .frameSeqCon1 {
   margin-top: 2.5%;
   overflow-y: scroll;
   height: 400px;
   overflow-x: hidden;
   margin-right: 50px;
 }
-.container .page2 .frameSeqCon1 .frameSeqCon2 {
+.container .page4 .frameSeqCon1 .frameSeqCon2 {
   height: 4000px;
   position: relative;
   margin-right: -50px;
   padding-right: 50px;
 }
-.container .page2 .frameSeqCon1 .frameImg {
+.container .page4 .frameSeqCon1 .frameImg {
   height: 400px;
   position: -webkit-sticky;
   position: -moz-sticky;
   position: sticky;
   top: 0;
   left: 0;
+}
+.container .page5 .xrayConCon {
+  width: imgWidth;
+  margin: 0 auto;
+}
+.container .page5 .xrayConCon .xrayCon {
+  position: relative;
+  width: imgWidth;
+  height: 720px;
+  transform: scale(0.75);
+}
+.container .page5 .xrayConCon .xrayCon .xrayImg {
+  position: absolute;
+  width: imgWidth;
+  height: 720px;
+}
+.container .page5 .xrayConCon .xrayCon .xrayImg.imgScrubber {
+  background-color: rgba(16, 6, 26, 0.5);
+  left: 50%;
+  width: 10px;
+  height: 720px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.container .page5 .xrayConCon .imgBottom {
+  background: url(../images/harmonia/harmonia_xray.png) no-repeat;
+}
+.container .page5 .xrayConCon .imgTop {
+  background: url(../images/harmonia/harmonia__xray_1.png) no-repeat;
+  width: 50%;
 }
 .container .selectedPage, .container nav ul.paginationNav li div:hover {
   cursor: pointer;
@@ -454,8 +523,58 @@ img.rose {
   margin: 15px;
 }
 .container nav ul.paginationNav li div.selected {
+  background-color: transparent;
+}
+.visContainer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+  margin-top: 10%;
+}
+.visContainer .overlayRange {
+  background-color: #FDFDEC;
+  padding: 3px 20px;
+  border-radius: 10px;
+  box-shadow: 2px 0px 10px 10px rgba(16, 6, 26, 0.1);
+  position: absolute;
+  margin-top: 15%;
+  z-index: 3;
+}
+.visContainer .overlayRange input[type=range] {
+  margin-top: 1%;
+  width: 100%;
+}
+.visContainer .overlayRange label {
+  font-size: 1.3rem;
+}
+.visContainer .overlayRange .feedback {
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+#datGui ul li {
+  background-color: #FDFDEC;
+  color: #10061A;
+  font-family: "Open Sans", sans-serif;
+  text-shadow: none;
+  font-size: 1rem;
+}
+#datGui ul .slider {
   background-color: #FDFDEC;
 }
+#datGui ul .slider-fg {
+  background-color: #10061A;
+}
+#datGui ul input[type=text] {
+  font-family: "Open Sans", sans-serif;
+  color: #FDFDEC;
+}
+#datGui .close-button {
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+}
+
 footer ul {
   display: flex;
   flex-direction: row;

@@ -14,11 +14,20 @@ $h4Size: 35px;
 $frameImgWid: 700px;
 $frameImgHt: 400px;
 $marginShift: -20px;
+$imgWidth: 1280px;
 
 @mixin insetShadow {
     // box-shadow: inset -3px -3px 10px 0.5px lighten($chlorophyllGreen, 0.5),
     box-shadow: inset -3px -3px 10px 0.5px lighten($inkyJetChracoal, 0.5),
         inset 3px 3px 10px 0.5px transparentize($inkyJetChracoal, 0.9);  
+}
+
+iframe {
+  /* //1290px; 720px*/
+//   margin-top: -30%;
+    margin-top: 2.5%;
+    width: $imgWidth / 1.5;
+    height: 500px;
 }
 
 // hide without display property, since it's overriden by grid 
@@ -196,7 +205,7 @@ button {
 }
 
 button:hover {
-    color: $paleParchment;
+    color: transparent;//~
     background-color: $inkyJetChracoal;
     cursor: pointer;
     // @include insetShadow();
@@ -318,6 +327,7 @@ img.rose {
 
 .caption {
     font-size: $pSize / 2;
+    text-align: center;
 }
 
 .container {
@@ -336,6 +346,46 @@ img.rose {
         }
 
         .page1 {
+            .ar {
+                position: relative;
+                model-viewer {
+                    margin-top: 1.5%;
+                    // height: 35vh;
+                    width: 100vw;//~
+                    height: 70vh;
+
+                    // model-viewer attributes https://modelviewer.dev/docs/
+                    --poster-color: $paleParchment;
+                }
+                .overlayText {
+                    position: absolute;
+                    z-index: 2;
+                    top: 10%;
+                    left: 10%;
+                    width: 25%;
+                    padding: 1.5%;
+                    font-size: $pSize / 1.5;
+                    background-color: transparentize($paleParchment, 0.4);
+                }
+            }
+            .caption {
+                margin-top: 1.5%;
+            }
+        }
+        // word tree
+        .page2 { 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            
+            .wordTree {
+                // border: red 2px solid;
+                margin-top: 0%;
+                width: 60vw;
+            }
+        }
+        .page3 {
             h2 {
                 margin-left: -5%;
             }
@@ -343,8 +393,8 @@ img.rose {
             .caption {
                 margin: 0 auto;
                 text-align: center;
-                margin-left: -10%;
-                margin-top: $marginShift - 10;
+                margin-left: -5%;
+                margin-top: $marginShift * -1.5;//- 10;
             }
 
             .harmoniaAnatomy1 {
@@ -423,7 +473,7 @@ img.rose {
         }
     }
 
-    .page3 {
+    .page5 {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -439,10 +489,11 @@ img.rose {
         }
     }
 
-    .page2 {
+    .page4 {
         .caption {
-            margin-top: 2.5%;
-            text-align: center;
+            // margin-top: 2.5%;
+            margin-top: $marginShift * -1.5;
+            // text-align: center;
         }
 
         .frameSeqCon1 {
@@ -467,6 +518,43 @@ img.rose {
                 top: 0;
                 left: 0;
             }
+        }
+    }
+    .page5 {
+        .xrayConCon {
+            width: imgWidth;//50vw;//900px;
+            margin: 0 auto;
+            .xrayCon {
+                position: relative;
+                width: imgWidth;//50vw;//900px;//~
+                height: 720px;//400px;
+                transform: scale(0.75);
+                // background-color: red;
+                .xrayImg {
+                    position: absolute;
+                    width: imgWidth;//50vw;//900px;
+                    height: 720px;//400px;
+                // height: ;
+                   
+                    &.imgScrubber {
+                        background-color: transparentize($inkyJetChracoal, 0.5);//~
+                        left: 50%;
+                        width: 10px;//~
+                        height: 720px;
+                        border-radius: 20px;
+                        cursor: pointer;
+                    }
+                }
+            }
+            .imgBottom {
+                background: url(../images/harmonia/harmonia_xray.png) no-repeat;
+            }
+
+            .imgTop {
+                background: url(../images/harmonia/harmonia__xray_1.png) no-repeat;
+                width: 50%;//~
+            }
+
         }
     }
     .selectedPage {
@@ -501,7 +589,7 @@ img.rose {
             }
 
             li div.selected {
-                background-color: $paleParchment;
+                background-color: transparent;
             }
 
             li div:hover {
@@ -510,6 +598,66 @@ img.rose {
         }
     }
 }
+
+// globe
+.visContainer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    margin-top: 10%;
+  
+    .overlayRange {
+      background-color: $paleParchment;
+      padding: 3px 20px;
+      border-radius: 10px;
+      box-shadow: 2px 0px 10px 10px transparentize($inkyJetChracoal, 0.9);
+      position: absolute;
+      margin-top: 15%;
+      z-index: 3;
+  
+      input[type=range] {
+        margin-top: 1%;
+        width: 100%;
+      }
+      
+      label {
+        font-size: 1.3rem;
+      }
+
+      .feedback {
+          font-size: 1.7rem;
+          text-align: center;
+      }
+    }
+  
+  }
+
+#datGui {
+    ul {
+      li {
+        background-color: $paleParchment;
+        color: $inkyJetChracoal;
+        font-family: 'Open Sans', sans-serif;
+        text-shadow: none;
+        font-size: 1rem;
+      }
+      .slider {
+        background-color: $paleParchment;
+      }
+      .slider-fg {
+        background-color: $inkyJetChracoal;
+      }
+      input[type=text] {
+        font-family: 'Open Sans', sans-serif;
+        color: $paleParchment;
+      }
+    }
+    .close-button {
+      font-size: 1rem;
+      font-family: 'Open Sans', sans-serif;
+    }
+  }
 
 footer {
     ul {

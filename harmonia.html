@@ -11,9 +11,20 @@
 
         <link href="css/reset.css" rel="stylesheet" type="text/css">
         <link href="css/main.css" rel="stylesheet" type="text/css">
+
+        <!-- 3D model viewer -->
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+        <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- GreenSock -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     </head>
 
     <body>
@@ -24,8 +35,36 @@
             </header>
             <div class="harmoniaCon">
                 <main class="paginationCon">
+                    <!-- ~ -->
                     <section class="page page1">
+                        <h2>3D/AR exploration</h2>
+                        <p class="caption">Explore the Harmonia Axyridis in 3D</p>
+                        <section class="ar">
+                            <h2 class="hidden">3D/AR model viewer</h2>
+                            <!-- <model-viewer src="assets/harmonia.gltf" alt="Harmonia Axyridis 3D model"
+                                auto-rotate camera-controls autoplay
+                                poster="images/harmonia_transparent.png"
+                                ar ar-modes="webxr scene-viewer"
+                                ar-scale="auto" ios-src="assets/harmonia.usdz">
+                            </model-viewer>   -->
+                            <model-viewer src="assets/harmonia.glb" 
+                                poster="assets/poster.png"
+                                camera-controls exposure="1.74" shadow-intensity="0" 
+                                shadow-softness="0.25" environment-image="assets/spruit_sunrise_1k_HDR.hdr" skybox-image="assets/spruit_sunrise_1k_HDR.hdr" 
+                                auto-rotate camera-target="-4.768e-7m -0.01m 0.03851m">
+                            </model-viewer>
+                            <p class="overlayText">
+                                ~Harmonia Axyridis, commonly known as a lady bug, or lady beetle is a true paradox. ~Their beautiful bright coral-red hues marked with dainty polka dots are a mark of danger to ward off potential predactors. Their aphid-heavy diet makes them ideal pest control solutions for farmers, yet they do tend to <a href="http://www.biokids.umich.edu/critters/Harmonia_axyridis/"> snack on fruits, such as grapes </a> rendering itself a pest at times! They do also have a tendency to sting, and <a href="https://www.webmd.com/allergies/news/20060307/ladybug-allergies-on-rise"> tend to be a cause for allergies and winter-time home infestations</a>.     
+                            </p>
+                        </section>
+                    </section>
+                    <section class="page page2 hidden">
+                        <h2>Classification</h2>
+                        <div class="wordTree"></div>
+                    </section>
+                    <section class="page page3 hidden">
                         <h2>Anatomy</h2>
+                        <p class="caption">click on a magnifying lens for the anatomy label</p>
                         <section class="anatomy harmoniaAnatomy1">
                             <img src="images/harmonia/harmonia_bottom.png" class="harmoniaImg" alt="Harmonia Axyridis bottom anatomy">
                             <div class="lensCon lens0"> <img src="images/harmonia/lens.png" data-lensindex="0" class="lens" alt="magnifying-lens"></div>
@@ -47,35 +86,76 @@
                             <div class="lensInfo info7" data-infoindex="7"><h4>Tarsus</h4></div>
                             <div class="lensInfo info8" data-infoindex="8"><h4>Sixth abdominal segment</h4></div>
                         </section>
-                        <p class="caption">click on a magnifying lens for the anatomy label</p>
                     </section>
-                    <section class="page page2 hidden">
+                    <section class="page page4 hidden">
                         <h2>Interactive Anatomy</h2>
+                        <p class="caption">scroll for an interactive anatomy expansion</p>
                         <section class="frameSequence">
-                            <h2 class="hidden">Interactive anatomy container</h2>
+                            <!-- <h2 class="hidden">Interactive anatomy container</h2>
                             <div class="frameSeqCon1">
                                <div class="frameSeqCon2">
                                         <div class="fixed">
                                             <img src="images/harmonia/frames/frame0000.jpg" alt="Harmonia Axyridis anatomy frame sequence" class="frameImg">
                                         </div>
                                  </div> 
-                            </div>    
+                            </div> -->
+                            <iframe src="iframe.html" title="interactive anatomy scrubbery" id="anatomyIframeRef" ></iframe>
+                        </section>
                     </section>
-                    <p class="caption">scroll for an interactive anatomy expansion</p>
-                </section>
-                <nav>
-                    <ul class="paginationNav">
-                        <li>
-                            <div></div>
-                        </li>
-                        <li>
-                            <div></div>
-                        </li>
-                    </ul>
-                </nav>
+                    <section class="page page5 hidden">
+                        <h2>Internal X-ray Anatomy</h2>
+                        <p class="caption">click and drag to reveal an x-ray of the internal anatomy</p>
+                        <section class="frameSequence">
+                            <h2 class="hidden">Internal anatomy container</h2>
+                            <div class="xrayConCon">
+                                <div class="xrayCon">
+                                    <div class="xrayImg imgBottom"></div>
+                                    <div class="xrayImg imgTop"></div>
+                                    <div class="xrayImg imgScrubber"></div>
+                                </div>    
+                            </div>
+                        </section>
+                    </section>
+                    <section class="page page5">
+                        <div class="visContainer">
+                            <div class="overlayRange">
+                              <label for="yearsRange">Explore different years</label>
+                              <br>
+                              <input type="range" value="1990" id="yearsRange" min="1910" max="2020" step="10" name="yearsRange" list="years">
+                              <datalist id="years">
+                                <option value="1910"></option>
+                                <option value="1920"></option>
+                                <option value="1930"></option>
+                                <option value="1940"></option>
+                                <option value="1950"></option>
+                                <option value="1960"></option>
+                                <option value="1970"></option>
+                                <option value="1980"></option>
+                                <option value="1990"></option>
+                                <option value="2000"></option>
+                                <option value="2010"></option>
+                                <option value="2020"></option>
+                              </datalist> 
+                              <p class="feedback">1990</p>
+                            </div>
+                            <div id="scene-container"></div>
+                          </div>
+                    </section>
+                    <nav>
+                        <ul class="paginationNav">
+                            <li><div></div></li>
+                            <li><div></div></li>
+                            <li><div></div></li>
+                            <li><div></div></li>
+                            <li><div></div></li>
+                            <li><div></div></li>
+                        </ul>
+                    </nav>
                 </main>
             </div>
         </div>
+        <script src="js/lib/dat.gui.min.js"></script>
+        <!-- <script type="module" src="js/threejs/main.js"></script> -->
         <script src="js/harmonia.js"></script>
     </body>
 </html>
