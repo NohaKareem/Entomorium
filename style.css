@@ -11,6 +11,7 @@ iframe
   /* //1290px; 720px*/
 	width: 2000px;
   height: 2000px;
+  border: 2px solid red;
 }
 
 body {

@@ -116,8 +116,34 @@
                             </div>
                         </section>
                     </section>
+                    <section class="page page5">
+                        <div class="visContainer">
+                            <div class="overlayRange">
+                              <label for="yearsRange">Explore different years</label>
+                              <br>
+                              <input type="range" value="1990" id="yearsRange" min="1910" max="2020" step="10" name="yearsRange" list="years">
+                              <datalist id="years">
+                                <option value="1910"></option>
+                                <option value="1920"></option>
+                                <option value="1930"></option>
+                                <option value="1940"></option>
+                                <option value="1950"></option>
+                                <option value="1960"></option>
+                                <option value="1970"></option>
+                                <option value="1980"></option>
+                                <option value="1990"></option>
+                                <option value="2000"></option>
+                                <option value="2010"></option>
+                                <option value="2020"></option>
+                              </datalist> 
+                              <p class="feedback">1990</p>
+                            </div>
+                            <div id="scene-container"></div>
+                          </div>
+                    </section>
                     <nav>
                         <ul class="paginationNav">
+                            <li><div></div></li>
                             <li><div></div></li>
                             <li><div></div></li>
                             <li><div></div></li>
@@ -128,6 +154,8 @@
                 </main>
             </div>
         </div>
+        <script src="js/lib/dat.gui.min.js"></script>
+        <!-- <script type="module" src="js/threejs/main.js"></script> -->
         <script src="js/harmonia.js"></script>
     </body>
 </html>

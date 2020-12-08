@@ -1,3 +1,9 @@
+iframe {
+  /* //1290px; 720px*/
+  width: 2000px;
+  height: 2000px;
+}
+
 .hidden {
   position: absolute !important;
   top: -9999px !important;
@@ -299,6 +305,11 @@ img.rose {
 .container .paginationCon .page2 {
   width: 100vw;
   height: 70vh;
+  border: green 2px solid;
+}
+.container .paginationCon .page2 .wordTree {
+  border: 2px red solid;
+  width: 100vw;
 }
 .container .paginationCon .page3 h2 {
   margin-left: -5%;
@@ -465,18 +476,18 @@ img.rose {
   width: 900px;
   height: 400px;
 }
-.container .page5 .xrayConCon .xrayCon .xrayImg .imgBottom {
-  background: url(../images/harmonia/harmonia_xray.png) no-repeat;
-}
-.container .page5 .xrayConCon .xrayCon .xrayImg .imgTop {
-  background: url(../images/harmonia/harmonia__xray_1.png) no-repeat;
-  width: 50%;
-}
 .container .page5 .xrayConCon .xrayCon .xrayImg .imgScrubber {
   background-color: red;
   left: 50%;
   width: 2px;
   cursor: pointer;
+}
+.container .page5 .xrayConCon .imgBottom {
+  background: url(../images/harmonia/harmonia_xray.png) no-repeat;
+}
+.container .page5 .xrayConCon .imgTop {
+  background: url(../images/harmonia/harmonia__xray_1.png) no-repeat;
+  width: 50%;
 }
 .container .selectedPage, .container nav ul.paginationNav li div:hover {
   cursor: pointer;
@@ -510,6 +521,56 @@ img.rose {
 .container nav ul.paginationNav li div.selected {
   background-color: transparent;
 }
+.visContainer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+  margin-top: 10%;
+}
+.visContainer .overlayRange {
+  background-color: #FDFDEC;
+  padding: 3px 20px;
+  border-radius: 10px;
+  box-shadow: 2px 0px 10px 10px rgba(16, 6, 26, 0.1);
+  position: absolute;
+  margin-top: 15%;
+  z-index: 3;
+}
+.visContainer .overlayRange input[type=range] {
+  margin-top: 1%;
+  width: 100%;
+}
+.visContainer .overlayRange label {
+  font-size: 1.3rem;
+}
+.visContainer .overlayRange .feedback {
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+#datGui ul li {
+  background-color: #FDFDEC;
+  color: #10061A;
+  font-family: "Open Sans", sans-serif;
+  text-shadow: none;
+  font-size: 1rem;
+}
+#datGui ul .slider {
+  background-color: #FDFDEC;
+}
+#datGui ul .slider-fg {
+  background-color: #10061A;
+}
+#datGui ul input[type=text] {
+  font-family: "Open Sans", sans-serif;
+  color: #FDFDEC;
+}
+#datGui .close-button {
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+}
+
 footer ul {
   display: flex;
   flex-direction: row;

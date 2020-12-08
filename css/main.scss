@@ -21,6 +21,14 @@ $marginShift: -20px;
         inset 3px 3px 10px 0.5px transparentize($inkyJetChracoal, 0.9);  
 }
 
+iframe ///~
+{
+  /* //1290px; 720px*/
+    width: 2000px;
+    height: 2000px;
+//   border: 2px solid red;
+}
+
 // hide without display property, since it's overriden by grid 
 // https://css-tricks.com/places-its-tempting-to-use-display-none-but-dont/
 .hidden {
@@ -366,7 +374,11 @@ img.rose {
         .page2 { //~
             width: 100vw;//~
             height: 70vh;
-            
+            border: green 2px solid;
+            .wordTree {
+                border: 2px red solid;
+                width: 100vw;
+            }
         }
         .page3 {
             h2 {
@@ -513,22 +525,12 @@ img.rose {
                 width: 900px;//~
                 height: 400px;
                 // background-color: red;
-    
                 .xrayImg {
                     position: absolute;
                     width: 900px;
                     height: 400px;
                 // height: ;
-    
-                    .imgBottom {
-                        background: url(../images/harmonia/harmonia_xray.png) no-repeat;
-                    }
-    
-                    .imgTop {
-                        background: url(../images/harmonia/harmonia__xray_1.png) no-repeat;
-                        width: 50%;//~
-                    }
-    
+                   
                     .imgScrubber {
                         background-color: red;//~
                         left: 50%;
@@ -537,6 +539,15 @@ img.rose {
                     }
                 }
             }
+            .imgBottom {
+                background: url(../images/harmonia/harmonia_xray.png) no-repeat;
+            }
+
+            .imgTop {
+                background: url(../images/harmonia/harmonia__xray_1.png) no-repeat;
+                width: 50%;//~
+            }
+
         }
     }
     .selectedPage {
@@ -581,7 +592,65 @@ img.rose {
     }
 }
 
+// globe
+.visContainer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    margin-top: 10%;
+  
+    .overlayRange {
+      background-color: $paleParchment;
+      padding: 3px 20px;
+      border-radius: 10px;
+      box-shadow: 2px 0px 10px 10px transparentize($inkyJetChracoal, 0.9);
+      position: absolute;
+      margin-top: 15%;
+      z-index: 3;
+  
+      input[type=range] {
+        margin-top: 1%;
+        width: 100%;
+      }
+      
+      label {
+        font-size: 1.3rem;
+      }
 
+      .feedback {
+          font-size: 1.7rem;
+          text-align: center;
+      }
+    }
+  
+  }
+
+#datGui {
+    ul {
+      li {
+        background-color: $paleParchment;
+        color: $inkyJetChracoal;
+        font-family: 'Open Sans', sans-serif;
+        text-shadow: none;
+        font-size: 1rem;
+      }
+      .slider {
+        background-color: $paleParchment;
+      }
+      .slider-fg {
+        background-color: $inkyJetChracoal;
+      }
+      input[type=text] {
+        font-family: 'Open Sans', sans-serif;
+        color: $paleParchment;
+      }
+    }
+    .close-button {
+      font-size: 1rem;
+      font-family: 'Open Sans', sans-serif;
+    }
+  }
 
 footer {
     ul {
