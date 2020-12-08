@@ -521,18 +521,18 @@ img.rose {
     }
     .page5 {
         .xrayConCon {
-            width: 900px;
+            width: 1280px;//50vw;//900px;
             margin: 0 auto;
-            border: solid 1px black;
             .xrayCon {
                 position: relative;
-                width: 900px;//~
-                height: 400px;
+                width: 1280px;//50vw;//900px;//~
+                height: 720px;//400px;
+                transform: scale(0.75);
                 // background-color: red;
                 .xrayImg {
                     position: absolute;
-                    width: 900px;
-                    height: 400px;
+                    width: 1280px;//50vw;//900px;
+                    height: 720px;//400px;
                 // height: ;
                    
                     .imgScrubber {
