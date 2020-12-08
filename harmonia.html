@@ -23,6 +23,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     </head>
 
     <body>
@@ -33,6 +35,7 @@
             </header>
             <div class="harmoniaCon">
                 <main class="paginationCon">
+                    <!-- ~ -->
                     <section class="page page1">
                         <h2>3D/AR exploration</h2>
                         <p class="caption">Explore the Harmonia Axyridis in 3D</p>
@@ -55,7 +58,11 @@
                             </p>
                         </section>
                     </section>
-                    <section class="page page2 hidden">
+                    <section class="page page2">
+                        <h2>Classification</h2>
+                        <div class="wordTree"></div>
+                    </section>
+                    <section class="page page3 hidden">
                         <h2>Anatomy</h2>
                         <p class="caption">click on a magnifying lens for the anatomy label</p>
                         <section class="anatomy harmoniaAnatomy1">
@@ -80,22 +87,39 @@
                             <div class="lensInfo info8" data-infoindex="8"><h4>Sixth abdominal segment</h4></div>
                         </section>
                     </section>
-                    <section class="page page3 hidden">
+                    <section class="page page4 hidden">
                         <h2>Interactive Anatomy</h2>
                         <p class="caption">scroll for an interactive anatomy expansion</p>
                         <section class="frameSequence">
-                            <h2 class="hidden">Interactive anatomy container</h2>
+                            <!-- <h2 class="hidden">Interactive anatomy container</h2>
                             <div class="frameSeqCon1">
                                <div class="frameSeqCon2">
                                         <div class="fixed">
                                             <img src="images/harmonia/frames/frame0000.jpg" alt="Harmonia Axyridis anatomy frame sequence" class="frameImg">
                                         </div>
                                  </div> 
-                            </div>    
+                            </div> -->
+                            <iframe src="iframe.html" title="interactive anatomy scrubbery" id="anatomyIframeRef" ></iframe>
+                        </section>
+                    </section>
+                    <section class="page page5 hidden">
+                        <h2>Internal X-ray Anatomy</h2>
+                        <p class="caption">click and drag to reveal an x-ray of the internal anatomy</p>
+                        <section class="frameSequence">
+                            <h2 class="hidden">Internal anatomy container</h2>
+                            <div class="xrayConCon">
+                                <div class="xrayCon">
+                                    <div class="xrayImg imgBottom"></div>
+                                    <div class="xrayImg imgTop"></div>
+                                    <div class="xrayImg imgScrubber"></div>
+                                </div>    
+                            </div>
                         </section>
                     </section>
                     <nav>
                         <ul class="paginationNav">
+                            <li><div></div></li>
+                            <li><div></div></li>
                             <li><div></div></li>
                             <li><div></div></li>
                             <li><div></div></li>

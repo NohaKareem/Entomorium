@@ -341,8 +341,8 @@ img.rose {
                 position: relative;
                 model-viewer {
                     margin-top: 1.5%;
-                    height: 35vh;
-                    width: 100vw;
+                    // height: 35vh;
+                    width: 100vw;//~
                     height: 70vh;
 
                     // model-viewer attributes https://modelviewer.dev/docs/
@@ -363,8 +363,12 @@ img.rose {
                 margin-top: 1.5%;
             }
         }
-
-        .page2 {
+        .page2 { //~
+            width: 100vw;//~
+            height: 70vh;
+            
+        }
+        .page3 {
             h2 {
                 margin-left: -5%;
             }
@@ -452,7 +456,7 @@ img.rose {
         }
     }
 
-    .page4 {
+    .page5 {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -468,7 +472,7 @@ img.rose {
         }
     }
 
-    .page3 {
+    .page4 {
         .caption {
             // margin-top: 2.5%;
             margin-top: $marginShift * -1.5;
@@ -496,6 +500,42 @@ img.rose {
                 position: sticky;
                 top: 0;
                 left: 0;
+            }
+        }
+    }
+    .page5 {
+        .xrayConCon {
+            width: 900px;
+            margin: 0 auto;
+            border: solid 1px black;
+            .xrayCon {
+                position: relative;
+                width: 900px;//~
+                height: 400px;
+                // background-color: red;
+    
+                .xrayImg {
+                    position: absolute;
+                    width: 900px;
+                    height: 400px;
+                // height: ;
+    
+                    .imgBottom {
+                        background: url(../images/harmonia/harmonia_xray.png) no-repeat;
+                    }
+    
+                    .imgTop {
+                        background: url(../images/harmonia/harmonia__xray_1.png) no-repeat;
+                        width: 50%;//~
+                    }
+    
+                    .imgScrubber {
+                        background-color: red;//~
+                        left: 50%;
+                        width: 2px;//~
+                        cursor: pointer;
+                    }
+                }
             }
         }
     }
@@ -540,6 +580,8 @@ img.rose {
         }
     }
 }
+
+
 
 footer {
     ul {
