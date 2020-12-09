@@ -636,8 +636,33 @@ img.rose {
             text-align: center;
         }
         }
-    
     }
+}
+
+.page7 {
+    .overlayText {
+        margin-top: 15%;
+        margin-left: 30%;
+        background-color: transparentize($paleParchment, 0);
+    }
+
+    .dietCon {
+        width: 100vw;
+        height: $imgHeight;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 1.5%;
+
+        .dietBox {
+            // margin-right: 0;//.001px;
+            background-color: $inkyJetChracoal;
+            width: $imgWidth / 100;
+            height: $imgHeight / 70;
+            transform: scale(0.25);
+        }
+    }
+
 }
 
 #datGui {

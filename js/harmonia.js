@@ -7,17 +7,19 @@
     const PAGES = document.querySelectorAll('.page');
     const PICTOGRAM = document.querySelector('.logo_pictogram');
     const SLOW_EASE = "slow(0.7, 0.7, false)";
-    const ANATOMY_LENS_PAGE = 2, INTERACTIVE_ANATOMY_SCROLL= 3, HABITAT_PAGE = 5;
+    const ANATOMY_LENS_PAGE = 2, INTERACTIVE_ANATOMY_SCROLL= 3, HABITAT_PAGE = 5, DIET_PAGE = 6;
     let DAT_GUI;
-    
+
     window.onload = _ => {
         DAT_GUI = document.querySelector('#datGui');
     }
 
     let toggleAlpha = [];
+    let dietTimeline = gsap.timeline();
 
     // set up magnifying lens animations and clickable functionality
     let lensTimeline = gsap.timeline();
+
     lensTimeline.fromTo(".harmoniaImg", 1.5, { autoAlpha: 0} , { autoAlpha: 1, ease: SLOW_EASE });
     LENSES.forEach(lens => {
 
@@ -53,11 +55,14 @@
                     DAT_GUI.style.display = 'none';
 
                     // restart animation
+                    // ~ switch
                     if (j == ANATOMY_LENS_PAGE) {
                         lensTimeline.restart();
                     } else if (j == HABITAT_PAGE) {
                         gsap.fromTo(DAT_GUI, 3, { opacity: 0 }, { opacity: 1, ease: SLOW_EASE });
                         DAT_GUI.style.display = 'block';
+                    } else if (j == DIET_PAGE) {
+                        dietTimeline.restart();
                     }
                  }
                 else 
@@ -150,5 +155,16 @@
         let wordTreeVis = new google.visualization.WordTree(document.querySelector('.wordTree'));
         wordTreeVis.draw(data, options);
     }
+
+// diet
+let dietCon = document.querySelector('.dietCon');
+for(let i = 0; i < 200; i++) {
+    for(let j = 0; j < 25; j++) {
+        let box = document.createElement('div');//`<div class="dietBox"></div>`;
+        box.classList.add('dietBox');
+        dietCon.appendChild(box);
+        dietTimeline.fromTo(box, 0.05, { opacity: 0 }, { opacity: 1, ease: SLOW_EASE });
+    }
+}
 
 })();

@@ -560,6 +560,26 @@ img.rose {
   text-align: center;
 }
 
+.page7 .overlayText {
+  margin-top: 15%;
+  margin-left: 30%;
+  background-color: #fdfdec;
+}
+.page7 .dietCon {
+  width: 100vw;
+  height: 720px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 1.5%;
+}
+.page7 .dietCon .dietBox {
+  background-color: #10061A;
+  width: 12.8px;
+  height: 10.2857142857px;
+  transform: scale(0.25);
+}
+
 #datGui {
   margin-top: 25%;
   margin-right: 5%;
