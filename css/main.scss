@@ -42,6 +42,10 @@ a {
     color: $inkyJetChracoal;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 body {
     background-color: $paleParchment;
     color: $inkyJetChracoal;
@@ -590,6 +594,33 @@ img.rose {
                 @extend .selectedPage;
             }
         }
+
+        .textMenuCon {
+            position: relative;
+        }
+        .textMenu {
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            width: 400px;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 0;
+            transform: rotate(90deg);
+            margin-top: -83%;
+            margin-left: 95%;
+
+            li {
+                font-size: $pSize / 2;
+                line-height: $pSize;
+                margin-right: 15px;
+            }
+
+            li.selected {
+                text-decoration: underline;
+            }
+        }
     }
 }
 
@@ -698,6 +729,7 @@ img.rose {
     font-family: 'Open Sans', sans-serif;
     }
 }
+
 footer {
     ul {
         display: flex;

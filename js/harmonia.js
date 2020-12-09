@@ -124,26 +124,26 @@
     let data;
     function renderWordTree() {//~
         data = google.visualization.arrayToDataTable(
-            [   ['id', 'childLabel', 'parent', 'size'],//, { role: 'style'}
-                [0, 'Arthropoda', -1, 1],//'black'
-                [1, 'Insecta', 0, 1],//'black'
-                [2, 'Coleoptera', 1, 1],//'black'
-                [3, 'Harmonia Axyridis', 2, 1],//'black'
+            [   ['id', 'childLabel', 'parent', 'size', { role: 'style'}],
+                [0, 'Arthropoda', -1, 1, '#10061A'],
+                [1, 'Insecta', 0, 1, '#10061A'],
+                [2, 'Coleoptera', 1, 1, '#10061A'],
+                [3, 'Harmonia Axyridis', 2, 1, '#CF9893'],
 
-                [4, 'Coccinella 22-Punctata', 2, 1],//'black'
+                [4, 'Coccinella 22-Punctata', 2, 1, '#10061A'],
 
-                [5, 'Chrysomela Cerealis', 2, 1],//'black'
+                [5, 'Chrysomela Cerealis', 2, 1, '#10061A'],
 
-                [6, 'Lepidoptera', 1, 1],//'black'
-                [7, 'Gonepteryx Merula', 6, 1],//'black'
-                [8, 'Vanessa Cardui', 6, 1],//'black'
+                [6, 'Lepidoptera', 1, 1, '#10061A'],
+                [7, 'Gonepteryx Merula', 6, 1, '#10061A'],
+                [8, 'Vanessa Cardui', 6, 1, '#10061A'],
                 
-                [9, 'Nymphalis Phoroys', 6, 1]//'black'  
+                [9, 'Nymphalis Phoroys', 6, 1, '#10061A']  
           ]
         );
 
         let options = {
-            colors: ['black', 'red', 'red'],//~
+            colors: ['#10061A', '#10061A', '#10061A'],
             backgroundColor: 'transparent',
             fontName: 'Open Sans', 
             wordtree: {
@@ -160,7 +160,7 @@
 let dietCon = document.querySelector('.dietCon');
 for(let i = 0; i < 200; i++) {
     for(let j = 0; j < 25; j++) {
-        let box = document.createElement('div');//`<div class="dietBox"></div>`;
+        let box = document.createElement('div');
         box.classList.add('dietBox');
         dietCon.appendChild(box);
         dietTimeline.fromTo(box, 0.05, { opacity: 0 }, { opacity: 1, ease: SLOW_EASE });
