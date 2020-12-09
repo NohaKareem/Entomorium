@@ -542,17 +542,18 @@ img.rose {
                         border-radius: 20px;
                         cursor: pointer;
                     }
+
+                    &.imgBottom {
+                        background: url(../images/harmonia/harmonia_xray.png) no-repeat;
+                    }
+                    
+                    &.imgTop {
+                        background: url(../images/harmonia/harmonia__xray_1.png) no-repeat;
+                        width: 50%;
+                    }
                 }
             }
-            .imgBottom {
-                background: url(../images/harmonia/harmonia_xray.png) no-repeat;
-            }
-
-            .imgTop {
-                background: url(../images/harmonia/harmonia__xray_1.png) no-repeat;
-                width: 50%;//~
-            }
-
+        
         }
     }
     .selectedPage {

@@ -96,9 +96,8 @@
         OVERLAY_TEXT.classList.add('hidden');
     });
 
-    // drag reveal widget
+    // x-ray scrubber widget
     let xrayCon = document.querySelector('.xrayCon');
-    let imgBottom = document.querySelector('.imgBottom');
     let imgTop = document.querySelector('.imgTop');
     let imgScrubber = document.querySelector('.imgScrubber');
 

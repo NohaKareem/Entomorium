@@ -489,10 +489,10 @@ img.rose {
   border-radius: 20px;
   cursor: pointer;
 }
-.container .page5 .xrayConCon .imgBottom {
+.container .page5 .xrayConCon .xrayCon .xrayImg.imgBottom {
   background: url(../images/harmonia/harmonia_xray.png) no-repeat;
 }
-.container .page5 .xrayConCon .imgTop {
+.container .page5 .xrayConCon .xrayCon .xrayImg.imgTop {
   background: url(../images/harmonia/harmonia__xray_1.png) no-repeat;
   width: 50%;
 }
