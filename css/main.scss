@@ -341,7 +341,16 @@ img.rose {
         .page {
             margin: 0 5%;
         }
-
+        .overlayText {
+            position: absolute;
+            z-index: 2;
+            top: 10%;
+            left: 10%;
+            width: 25%;
+            padding: 1.5%;
+            font-size: $pSize / 1.5;
+            background-color: transparentize($paleParchment, 0.4);
+        }
         .page1 {
             .ar {
                 position: relative;
@@ -353,16 +362,6 @@ img.rose {
 
                     // model-viewer attributes https://modelviewer.dev/docs/
                     --poster-color: $paleParchment;
-                }
-                .overlayText {
-                    position: absolute;
-                    z-index: 2;
-                    top: 10%;
-                    left: 10%;
-                    width: 25%;
-                    padding: 1.5%;
-                    font-size: $pSize / 1.5;
-                    background-color: transparentize($paleParchment, 0.4);
                 }
             }
             .caption {
@@ -594,41 +593,52 @@ img.rose {
     }
 }
 
-// globe
-.visContainer {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    position: relative;
-    margin-top: 0%;
-    width: $imgWidth;
-    height: $imgHeight;
-
-    .overlayRange {
-      background-color: transparentize($paleParchment, 0.1);
-      padding: 3px 20px;
-      border-radius: 10px;
-    //   box-shadow: 2px 0px 100px 10px transparentize($inkyJetChracoal, 0.9);
-      position: absolute;
-      margin-top: 5%;
-      z-index: 3;
-  
-      input[type=range] {
-        margin-top: 1%;
-        width: 100%;
-      }
-      
-      label {
-        font-size: 1.3rem;
-      }
-
-      .feedback {
-        font-size: 1.7rem;
-        text-align: center;
-      }
+// habitat
+.page6 {
+    .overlayText {
+        margin-top: 20%;
+        width: $imgWidth / 3.5 !important;
+        .fiction {
+            font-size: 0.9rem;
+        }
     }
-  
-  }
+
+    // globe
+    .visContainer {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        position: relative;
+        margin-top: 0%;
+        width: $imgWidth;
+        height: $imgHeight;
+
+        .overlayRange {
+        background-color: transparentize($paleParchment, 0.1);
+        padding: 3px 20px;
+        border-radius: 10px;
+        //   box-shadow: 2px 0px 100px 10px transparentize($inkyJetChracoal, 0.9);
+        position: absolute;
+        margin-top: 5%;
+        z-index: 3;
+    
+        input[type=range] {
+            margin-top: 1%;
+            width: 100%;
+        }
+        
+        label {
+            font-size: 1.3rem;
+        }
+
+        .feedback {
+            font-size: 1.7rem;
+            text-align: center;
+        }
+        }
+    
+    }
+}
 
 #datGui {
     // transform: translate(-50%, 70%);
@@ -637,31 +647,30 @@ img.rose {
     border-top: 5px solid $inkyJetChracoal;
     ul {
         padding: 10% 0;
-      li {
+    li {
         border: none;
         background-color: $paleParchment;
         color: $inkyJetChracoal;
         font-family: 'Open Sans', sans-serif;
         text-shadow: none;
         font-size: 1rem;
-      }
-      .slider {
+    }
+    .slider {
         background-color: $paleParchment;
-      }
-      .slider-fg {
+    }
+    .slider-fg {
         background-color: $inkyJetChracoal;
-      }
-      input[type=text] {
+    }
+    input[type=text] {
         font-family: 'Open Sans', sans-serif;
         color: $paleParchment;
-      }
+    }
     }
     .close-button {
-      font-size: 1rem;
-      font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
     }
 }
-
 footer {
     ul {
         display: flex;
