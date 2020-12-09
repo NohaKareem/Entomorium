@@ -9,15 +9,9 @@
     const SLOW_EASE = "slow(0.7, 0.7, false)";
     const ANATOMY_LENS_PAGE = 2, INTERACTIVE_ANATOMY_SCROLL= 3, HABITAT_PAGE = 5;
     let DAT_GUI;
-
-    // let toggleDatGui = dat_visible => {
-    //     if (!dat_visible) DAT_GUI.classList.add('hidden');
-    //     else DAT_GUI.classList.remove('hidden');
-    // // }
-
+    
     window.onload = _ => {
         DAT_GUI = document.querySelector('#datGui');
-        // toggleDatGui(false);
     }
 
     let toggleAlpha = [];
@@ -56,52 +50,21 @@
             PAGES.forEach((page, j) => {
                 if (j == i) {
                     page.classList.remove('hidden');
-                    // toggleDatGui(false);
                     DAT_GUI.style.display = 'none';
 
                     // restart animation
                     if (j == ANATOMY_LENS_PAGE) {
                         lensTimeline.restart();
                     } else if (j == HABITAT_PAGE) {
-                        // toggleDatGui(true);
                         gsap.fromTo(DAT_GUI, 3, { opacity: 0 }, { opacity: 1, ease: SLOW_EASE });
                         DAT_GUI.style.display = 'block';
-
-                        // DAT_GUI.classList.remove('hidden');
-                        // console.log('habitat')
                     }
-                    // else if (j == INTERACTIVE_ANATOMY_SCROLL){
-                    //     gsap.fromTo(FRAME_IMG, 2, { autoAlpha: 0} , { autoAlpha: 1, y: 10, ease: SLOW_EASE })
-                        
-                    //     // refresh to fix trigger bug https://stackoverflow.com/a/64669108
-                    //     ScrollTrigger.refresh();
-                    // }
                  }
                 else 
                     page.classList.add('hidden');
             });
         });
     });
-    
-        // // frame scrubber
-        // let frames = { frame: 0 };
-        // let totalFrames = 90; 
-        // const FRAME_IMG = document.querySelector('.frameImg');
-
-        // gsap.registerPlugin(ScrollTrigger);
-        // gsap.to(frames, {
-        //     frame: totalFrames - 1, 
-        //     snap: "frame", 
-        //     scrollTrigger: {
-        //         // markers: true,
-        //         toggleActions: "play pause resume reset",
-        //         scroller: ".frameSeqCon1",
-        //         scrub: 0.75
-        //     }, 
-        //     onUpdate: _ => {
-        //         FRAME_IMG.src = `images/harmonia/frames/frame${(frames.frame).toString().padStart(4, '0')}.jpg`;
-        //     }
-        // });
 
     // animate logo pictogram
     PICTOGRAM.addEventListener("mouseover", _ => {
@@ -143,7 +106,7 @@
         if(isScrubbing) {
             let x = e.clientX - xrayCon.getBoundingClientRect().left;
             if(x < start) { x = start; }
-            else if (x > end) { x = end; } //~ - 2
+            else if (x > end) { x = end; } 
             
             imgScrubber.style.left = x + 'px';
             imgTop.style.width = x + 'px';
