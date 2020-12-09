@@ -1,5 +1,4 @@
 iframe {
-  /* //1290px; 720px*/
   margin-top: 2.5%;
   width: 853.3333333333px;
   height: 520px;
@@ -530,15 +529,16 @@ img.rose {
   justify-content: center;
   align-content: center;
   position: relative;
-  margin-top: 10%;
+  margin-top: 0%;
+  width: 1280px;
+  height: 720px;
 }
 .visContainer .overlayRange {
-  background-color: #FDFDEC;
+  background-color: rgba(253, 253, 236, 0.9);
   padding: 3px 20px;
   border-radius: 10px;
-  box-shadow: 2px 0px 10px 10px rgba(16, 6, 26, 0.1);
   position: absolute;
-  margin-top: 15%;
+  margin-top: 5%;
   z-index: 3;
 }
 .visContainer .overlayRange input[type=range] {

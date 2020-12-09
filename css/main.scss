@@ -22,10 +22,7 @@ $imgHeight: 720px;
     box-shadow: inset -3px -3px 10px 0.5px lighten($inkyJetChracoal, 0.5),
         inset 3px 3px 10px 0.5px transparentize($inkyJetChracoal, 0.9);  
 }
-
 iframe {
-  /* //1290px; 720px*/
-//   margin-top: -30%;
     margin-top: 2.5%;
     width: $imgWidth / 1.5;
     height: $imgHeight - 200;
@@ -166,7 +163,6 @@ h4.comingSoon {
 
 // video
 video {
-    // background-color: darken($chlorophyllGreen, 10);
     background-color: $paleParchment;
     width: $vidWid;
     height: $vidHt;
@@ -523,20 +519,18 @@ img.rose {
     }
     .page5 {
         .xrayConCon {
-            width: $imgWidth;//50vw;//900px;
+            width: $imgWidth;
             margin: 0 auto;
             .xrayCon {
                 position: relative;
-                width: $imgWidth;//50vw;//900px;//~
-                height: $imgHeight;//400px;
+                width: $imgWidth;
+                height: $imgHeight;
                 transform: scale(0.75);
-                // background-color: red;
                 .xrayImg {
                     position: absolute;
-                    width: $imgWidth;//50vw;//900px;
-                    height: $imgHeight;//400px;
-                // height: ;
-                   
+                    width: $imgWidth;
+                    height: $imgHeight;
+
                     &.imgScrubber {
                         background-color: transparentize($inkyJetChracoal, 0.5);//~
                         left: 50%;
@@ -606,15 +600,17 @@ img.rose {
     justify-content: center;
     align-content: center;
     position: relative;
-    margin-top: 10%;
-  
+    margin-top: 0%;
+    width: $imgWidth;
+    height: $imgHeight;
+
     .overlayRange {
-      background-color: $paleParchment;
+      background-color: transparentize($paleParchment, 0.1);
       padding: 3px 20px;
       border-radius: 10px;
-      box-shadow: 2px 0px 10px 10px transparentize($inkyJetChracoal, 0.9);
+    //   box-shadow: 2px 0px 100px 10px transparentize($inkyJetChracoal, 0.9);
       position: absolute;
-      margin-top: 15%;
+      margin-top: 5%;
       z-index: 3;
   
       input[type=range] {
@@ -627,8 +623,8 @@ img.rose {
       }
 
       .feedback {
-          font-size: 1.7rem;
-          text-align: center;
+        font-size: 1.7rem;
+        text-align: center;
       }
     }
   

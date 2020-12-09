@@ -81,16 +81,16 @@ class World {
     const resizer = new Resizer(container, camera, renderer);
   }
 
-  async init() {
-    const gltf = await loadMesh(model, true); 
-    loop.animate.push(gltf);
-    scene.add(gltf);
+  // async init() {
+  //   const gltf = await loadMesh(model, true); 
+  //   loop.animate.push(gltf);
+  //   scene.add(gltf);
 
-    // dat GUI controls
-    gui.add(gltf.rotation, 'x', -5, 5).name("ladybug X");
-    gui.add(gltf.rotation, 'y', -5, 5).name("ladybug Y");
-    gui.add(gltf.rotation, 'z', -5, 5).name("ladybug Z");
-  }
+  //   // dat GUI controls
+  //   gui.add(gltf.rotation, 'x', -5, 5).name("ladybug X");
+  //   gui.add(gltf.rotation, 'y', -5, 5).name("ladybug Y");
+  //   gui.add(gltf.rotation, 'z', -5, 5).name("ladybug Z");
+  // }
 
   // start and stop animations
   start() { loop.start(); }
