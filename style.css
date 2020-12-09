@@ -1,21 +1,6 @@
-/* #container
-{
-  margin: 0 auto;
-  max-width: 1400px;
-  display: flex;
-  justify-content: center;
-} */
-
-iframe
-{
-  /* //1290px; 720px*/
-	width: 2000px;
-  height: 2000px;
-  border: 2px solid red;
-}
-
 body {
-  height: 5000px; /*controls vertical scrolling height*/
+  /* //5000px */
+  height: 470vh; 
 }
 
 canvas {

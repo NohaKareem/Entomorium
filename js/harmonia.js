@@ -7,7 +7,19 @@
     const PAGES = document.querySelectorAll('.page');
     const PICTOGRAM = document.querySelector('.logo_pictogram');
     const SLOW_EASE = "slow(0.7, 0.7, false)";
-    const ANATOMY_LENS_PAGE = 2, INTERACTIVE_ANATOMY_SCROLL= 3;
+    const ANATOMY_LENS_PAGE = 2, INTERACTIVE_ANATOMY_SCROLL= 3, HABITAT_PAGE = 5;
+    let DAT_GUI;
+
+    // let toggleDatGui = dat_visible => {
+    //     if (!dat_visible) DAT_GUI.classList.add('hidden');
+    //     else DAT_GUI.classList.remove('hidden');
+    // // }
+
+    window.onload = _ => {
+        DAT_GUI = document.querySelector('#datGui');
+        // toggleDatGui(false);
+    }
+
     let toggleAlpha = [];
 
     // set up magnifying lens animations and clickable functionality
@@ -42,13 +54,22 @@
 
             // show relevant page
             PAGES.forEach((page, j) => {
-                if (j == i){
+                if (j == i) {
                     page.classList.remove('hidden');
-                    
+                    // toggleDatGui(false);
+                    DAT_GUI.style.display = 'none';
+
                     // restart animation
                     if (j == ANATOMY_LENS_PAGE) {
                         lensTimeline.restart();
-                    } 
+                    } else if (j == HABITAT_PAGE) {
+                        // toggleDatGui(true);
+                        gsap.fromTo(DAT_GUI, 3, { opacity: 0 }, { opacity: 1, ease: SLOW_EASE });
+                        DAT_GUI.style.display = 'block';
+
+                        // DAT_GUI.classList.remove('hidden');
+                        // console.log('habitat')
+                    }
                     // else if (j == INTERACTIVE_ANATOMY_SCROLL){
                     //     gsap.fromTo(FRAME_IMG, 2, { autoAlpha: 0} , { autoAlpha: 1, y: 10, ease: SLOW_EASE })
                         
@@ -165,7 +186,6 @@
 
         let wordTreeVis = new google.visualization.WordTree(document.querySelector('.wordTree'));
         wordTreeVis.draw(data, options);
-        console.log(options)
-    } 
+    }
 
 })();

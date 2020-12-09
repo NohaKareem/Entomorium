@@ -645,26 +645,28 @@ img.rose {
     margin-top: 25%;
     margin-right: 5%;
     border-top: 5px solid $inkyJetChracoal;
+    display: none;
+
     ul {
         padding: 10% 0;
-    li {
-        border: none;
-        background-color: $paleParchment;
-        color: $inkyJetChracoal;
-        font-family: 'Open Sans', sans-serif;
-        text-shadow: none;
-        font-size: 1rem;
-    }
-    .slider {
-        background-color: $paleParchment;
-    }
-    .slider-fg {
-        background-color: $inkyJetChracoal;
-    }
-    input[type=text] {
-        font-family: 'Open Sans', sans-serif;
-        color: $paleParchment;
-    }
+        li {
+            border: none;
+            background-color: $paleParchment;
+            color: $inkyJetChracoal;
+            font-family: 'Open Sans', sans-serif;
+            text-shadow: none;
+            font-size: 1rem;
+        }
+        .slider {
+            background-color: $paleParchment;
+        }
+        .slider-fg {
+            background-color: $inkyJetChracoal;
+        }
+        input[type=text] {
+            font-family: 'Open Sans', sans-serif;
+            color: $paleParchment;
+        }
     }
     .close-button {
     font-size: 1rem;
