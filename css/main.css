@@ -553,7 +553,16 @@ img.rose {
   text-align: center;
 }
 
+#datGui {
+  margin-top: 25%;
+  margin-right: 5%;
+  border-top: 5px solid #10061A;
+}
+#datGui ul {
+  padding: 10% 0;
+}
 #datGui ul li {
+  border: none;
   background-color: #FDFDEC;
   color: #10061A;
   font-family: "Open Sans", sans-serif;

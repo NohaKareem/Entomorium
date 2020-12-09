@@ -631,8 +631,14 @@ img.rose {
   }
 
 #datGui {
+    // transform: translate(-50%, 70%);
+    margin-top: 25%;
+    margin-right: 5%;
+    border-top: 5px solid $inkyJetChracoal;
     ul {
+        padding: 10% 0;
       li {
+        border: none;
         background-color: $paleParchment;
         color: $inkyJetChracoal;
         font-family: 'Open Sans', sans-serif;
@@ -654,7 +660,7 @@ img.rose {
       font-size: 1rem;
       font-family: 'Open Sans', sans-serif;
     }
-  }
+}
 
 footer {
     ul {
