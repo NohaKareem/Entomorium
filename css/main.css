@@ -128,125 +128,6 @@ h4.comingSoon {
   margin-top: 5%;
 }
 
-video {
-  background-color: #FDFDEC;
-  width: 900px;
-  height: 750px;
-  margin-top: 5%;
-  transform: scale(0.75);
-}
-
-.controlsRow {
-  position: absolute;
-}
-
-.controls {
-  position: absolute;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  column-gap: 20%;
-  text-align: center;
-  margin-top: -240px;
-}
-
-button {
-  font-size: 15px;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  border: none;
-  color: #10061A;
-  margin-top: 75px;
-  left: 360px;
-  font-family: "Playfair Display SC", serif;
-  position: relative;
-  background-color: rgba(255, 255, 255, 0);
-  box-shadow: -3px -3px 13px 0.5px #fdfdee, 3px 3px 3px 0.5px rgba(16, 6, 26, 0.5);
-}
-
-button:hover {
-  color: transparent;
-  background-color: #10061A;
-  cursor: pointer;
-}
-
-button.speed {
-  overflow-wrap: break-word;
-  line-height: 15px;
-}
-
-.scrubberCon {
-  width: 630px;
-  margin-left: 135px;
-  border-radius: 5%;
-  display: flex;
-}
-.scrubberCon input[type=range] {
-  width: 100%;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  height: 3.75px;
-  outline: none;
-  position: relative;
-  z-index: 2;
-  background-color: rgba(255, 255, 255, 0);
-}
-.scrubberCon input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 13.3333333333px;
-  height: 13.3333333333px;
-  background-color: #FDFDEC;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: 1s ease-out;
-}
-.scrubberCon input[type=range]::-webkit-slider-thumb:hover {
-  box-shadow: inset -3px -3px 10px 0.5px #11061c, inset 3px 3px 10px 0.5px rgba(16, 6, 26, 0.1);
-}
-.scrubberCon .progress {
-  position: absolute;
-  z-index: 1;
-  width: 75.5%;
-  height: 3.75px;
-  left: 135px;
-  top: 2px;
-  background-color: #04481b;
-  overflow: hidden;
-}
-.scrubberCon .progress .seen {
-  display: block;
-  width: 0%;
-  height: 100%;
-  background-color: #FDFDEC;
-}
-.scrubberCon .scrubberTime {
-  color: #FDFDEC;
-  margin-top: -2px;
-  margin-left: 80%;
-  font-size: 13px;
-  position: absolute;
-}
-
-.swapVid {
-  margin-top: 2%;
-}
-
-.swapVid:hover {
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-.player {
-  position: relative;
-}
-
-img.rose {
-  width: 450px;
-  position: absolute;
-  margin-left: -123%;
-  transform: rotate(-15deg);
-}
-
 .container header .logo_pictogram {
   width: 4vw;
   margin-top: 2%;
@@ -498,6 +379,16 @@ img.rose {
   top: 40%;
   left: -20px;
   background-color: rgba(16, 6, 26, 0.5);
+  animation: pulse 2s infinite alternate ease-in-out;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    box-shadow: 0 0 30px #CF9893;
+    transform: scale(1.5);
+  }
 }
 .container .page5 .xrayConCon .xrayCon .xrayImg.imgBottom {
   background: url(../images/harmonia/harmonia_xray.png) no-repeat;
