@@ -44,6 +44,10 @@
     let handlePage = (i) => {
         PAGES.forEach((page, j) => {
             if (j == i) {
+                // reveal overlay text
+                gsap.fromTo(OVERLAY_TEXT[i], 3, { autoAlpha: 0} , { autoAlpha: 1, ease: SLOW_EASE })
+                OVERLAY_TEXT[i].classList.remove('hidden');
+
                 page.classList.remove('hidden');
                 DAT_GUI.style.display = 'none';
 
