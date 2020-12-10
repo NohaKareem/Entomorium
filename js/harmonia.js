@@ -87,6 +87,11 @@
         pageButton.addEventListener("click", handleClick);
         pageButton.i = i;
         pageButton.navigator = pageButton;
+
+        let textMenuItem = TEXT_MENU[i];
+        textMenuItem.addEventListener("click", handleClick);
+        textMenuItem.i = i;
+        textMenuItem.navigator = textMenuItem;
     });
 
     // animate logo pictogram
