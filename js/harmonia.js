@@ -5,8 +5,10 @@
     const LENS_INFO = document.querySelectorAll('.lensInfo');
     const PAGE_NAV = document.querySelectorAll('.paginationNav li div');
     const PAGES = document.querySelectorAll('.page');
+    const TEXT_MENU = document.querySelectorAll('.textMenu li a');
     const PICTOGRAM = document.querySelector('.logo_pictogram');
     const SLOW_EASE = "slow(0.7, 0.7, false)";
+
     const ANATOMY_LENS_PAGE = 2, INTERACTIVE_ANATOMY_SCROLL= 3, HABITAT_PAGE = 5, DIET_PAGE = 6;
     let DAT_GUI;
 
@@ -44,9 +46,11 @@
         pageButton.addEventListener("click", _ => {
             // change button color
             pageButton.classList.add('selected');
+            TEXT_MENU[i].classList.add('selected');
 
             // reset other buttons
             PAGE_NAV.forEach((p, j) => { if (i != j) p.classList.remove('selected'); });
+            TEXT_MENU.forEach((p, j) => { if (i != j) p.classList.remove('selected'); });
 
             // show relevant page
             PAGES.forEach((page, j) => {

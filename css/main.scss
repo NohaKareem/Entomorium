@@ -535,18 +535,29 @@ img.rose {
                     height: $imgHeight;
 
                     &.imgScrubber {
-                        background-color: transparentize($inkyJetChracoal, 0.5);//~
+                        background-color: transparentize($inkyJetChracoal, 0.5);
                         left: 50%;
                         width: 10px;//~
                         height: $imgHeight;
                         border-radius: 20px;
                         cursor: pointer;
+                        position: relative;
+
+                        .circleScrubber {
+                            position: absolute;
+                            border-radius: 50%;
+                            width: 50px;
+                            height: 50px;
+                            top: 40%;
+                            left: -20px;
+                            background-color: transparentize($inkyJetChracoal, 0.5);
+                        }
                     }
 
                     &.imgBottom {
                         background: url(../images/harmonia/harmonia_xray.png) no-repeat;
                     }
-                    
+
                     &.imgTop {
                         background: url(../images/harmonia/harmonia__xray_1.png) no-repeat;
                         width: 50%;
@@ -618,7 +629,12 @@ img.rose {
                 margin-right: 15px;
             }
 
-            li.selected {
+            a:hover {
+                cursor: default;
+                text-decoration: none;
+            }
+
+            a.selected {
                 text-decoration: underline;
             }
         }

@@ -488,6 +488,16 @@ img.rose {
   height: 720px;
   border-radius: 20px;
   cursor: pointer;
+  position: relative;
+}
+.container .page5 .xrayConCon .xrayCon .xrayImg.imgScrubber .circleScrubber {
+  position: absolute;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  top: 40%;
+  left: -20px;
+  background-color: rgba(16, 6, 26, 0.5);
 }
 .container .page5 .xrayConCon .xrayCon .xrayImg.imgBottom {
   background: url(../images/harmonia/harmonia_xray.png) no-repeat;
@@ -549,7 +559,11 @@ img.rose {
   line-height: 30px;
   margin-right: 15px;
 }
-.container nav .textMenu li.selected {
+.container nav .textMenu a:hover {
+  cursor: default;
+  text-decoration: none;
+}
+.container nav .textMenu a.selected {
   text-decoration: underline;
 }
 
