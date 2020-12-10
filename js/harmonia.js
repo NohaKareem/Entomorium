@@ -7,14 +7,18 @@
     const PAGES = document.querySelectorAll('.page');
     const TEXT_MENU = document.querySelectorAll('.textMenu li a');
     const PICTOGRAM = document.querySelector('.logo_pictogram');
+    const LABEL_LINES = document.querySelectorAll('.line');
+    const LINE_LABELS = document.querySelectorAll('.lineLabel');
     const SLOW_EASE = "slow(0.7, 0.7, false)";
 
-    const ANATOMY_LENS_PAGE = 4, HABITAT_PAGE = 3, DIET_PAGE = 2;
+    const ANATOMY_LENS_PAGE = 4, HABITAT_PAGE = 3, DIET_PAGE = 2, XRAY_PAGE = 6;
     let DAT_GUI;
 
     window.onload = _ => {
         DAT_GUI = document.querySelector('#datGui');
     }
+
+    let revealAnim = (obj, time) => { gsap.fromTo(obj, time, { autoAlpha: 0 }, { autoAlpha: 1, ease: SLOW_EASE }); }
 
     let toggleAlpha = [];
     let dietTimeline = gsap.timeline();
@@ -45,7 +49,7 @@
         PAGES.forEach((page, j) => {
             if (j == i) {
                 // reveal overlay text
-                gsap.fromTo(OVERLAY_TEXT[i], 3, { autoAlpha: 0} , { autoAlpha: 1, ease: SLOW_EASE })
+                revealAnim(OVERLAY_TEXT[i], 3);
                 OVERLAY_TEXT[i].classList.remove('hidden');
 
                 page.classList.remove('hidden');
@@ -62,11 +66,15 @@
                        lensTimeline.restart();
                         break;
                     case HABITAT_PAGE:
-                        gsap.fromTo(DAT_GUI, 3, { opacity: 0 }, { opacity: 1, ease: SLOW_EASE });
+                        revealAnim(DAT_GUI, 3);
                         DAT_GUI.style.display = 'block';
                         break;
                     case DIET_PAGE:
                         dietTimeline.restart();
+                        break;
+                    case XRAY_PAGE:
+                        LABEL_LINES.forEach(line => { revealAnim(line, 3) });
+                        LINE_LABELS.forEach(label => { revealAnim(label, 3) });
                         break;
                 }
             } else { page.classList.add('hidden'); } 
@@ -117,7 +125,7 @@
     // show text on load
     MODEL_VIEWER.addEventListener("model-visibility", e => {
         if (e.detail.visible) {
-            gsap.fromTo(OVERLAY_TEXT[0], 3, { autoAlpha: 0} , { autoAlpha: 1, ease: SLOW_EASE })
+            revealAnim(OVERLAY_TEXT[0], 3);
             OVERLAY_TEXT[0].classList.remove('hidden');
         }
     });
