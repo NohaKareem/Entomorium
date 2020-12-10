@@ -104,19 +104,19 @@
     });
 
     const MODEL_VIEWER = document.querySelector('model-viewer');
-    const OVERLAY_TEXT = document.querySelector('.overlayText');
+    const OVERLAY_TEXT = document.querySelectorAll('.overlayText');
     
     // show text on load
     MODEL_VIEWER.addEventListener("model-visibility", e => {
         if (e.detail.visible) {
-            gsap.fromTo(OVERLAY_TEXT, 3, { autoAlpha: 0} , { autoAlpha: 1, ease: SLOW_EASE })
-            OVERLAY_TEXT.classList.remove('hidden');
+            gsap.fromTo(OVERLAY_TEXT[0], 3, { autoAlpha: 0} , { autoAlpha: 1, ease: SLOW_EASE })
+            OVERLAY_TEXT[0].classList.remove('hidden');
         }
     });
 
     // hide text on progress
     MODEL_VIEWER.addEventListener("progress", _ => {
-        OVERLAY_TEXT.classList.add('hidden');
+        OVERLAY_TEXT[0].classList.add('hidden');
     });
 
     // x-ray scrubber widget
