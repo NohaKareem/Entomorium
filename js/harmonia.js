@@ -41,23 +41,28 @@
         });
     });
 
-    let handlePage = (page, i, j) => {
-        if (j == i) {
-            page.classList.remove('hidden');
-            DAT_GUI.style.display = 'none';
+    let handlePage = (i) => {
+        PAGES.forEach((page, j) => {
+            if (j == i) {
+                page.classList.remove('hidden');
+                DAT_GUI.style.display = 'none';
 
-            // restart animation
-            if (j == ANATOMY_LENS_PAGE) {
-                lensTimeline.restart();
-            } else if (j == HABITAT_PAGE) {
-                gsap.fromTo(DAT_GUI, 3, { opacity: 0 }, { opacity: 1, ease: SLOW_EASE });
-                DAT_GUI.style.display = 'block';
-            } else if (j == DIET_PAGE) {
-                dietTimeline.restart();
-            } 
-         }
-        else 
-            page.classList.add('hidden');
+                // handle separate pages 
+                switch(j) {
+                    // reset animation
+                    case ANATOMY_LENS_PAGE:
+                       lensTimeline.restart();
+                        break;
+                    case HABITAT_PAGE:
+                        gsap.fromTo(DAT_GUI, 3, { opacity: 0 }, { opacity: 1, ease: SLOW_EASE });
+                        DAT_GUI.style.display = 'block';
+                        break;
+                    case DIET_PAGE:
+                        dietTimeline.restart();
+                        break;
+                }
+            } else { page.classList.add('hidden'); } 
+        });
     }
 
     // add pagination
@@ -65,16 +70,15 @@
         pageButton.addEventListener("click", _ => {
             // change button color
             pageButton.classList.add('selected');
-            TEXT_MENU[i].classList.add('selected');
 
             // reset other buttons
             PAGE_NAV.forEach((p, j) => { if (i != j) p.classList.remove('selected'); });
+
+            // update text nav bar
+            TEXT_MENU[i].classList.add('selected');
             TEXT_MENU.forEach((p, j) => { if (i != j) p.classList.remove('selected'); });
 
-            // show relevant page
-            PAGES.forEach((page, j) => {
-                handlePage(page, i, j);
-            });
+            handlePage(i);
         });
     });
 
