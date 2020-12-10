@@ -65,21 +65,28 @@
         });
     }
 
+    // handle nav clicks
+    let handleClick = (e) => {
+        let i = e.currentTarget.i;
+        let navigator = e.currentTarget.navigator;
+        // change button color
+        navigator.classList.add('selected');
+
+        // reset other buttons
+        PAGE_NAV.forEach((p, j) => { if (i != j) p.classList.remove('selected'); });
+
+        // update text nav bar
+        TEXT_MENU[i].classList.add('selected');
+        TEXT_MENU.forEach((p, j) => { if (i != j) p.classList.remove('selected'); });
+
+        handlePage(i);
+    }
+
     // add pagination
     PAGE_NAV.forEach((pageButton, i) => {
-        pageButton.addEventListener("click", _ => {
-            // change button color
-            pageButton.classList.add('selected');
-
-            // reset other buttons
-            PAGE_NAV.forEach((p, j) => { if (i != j) p.classList.remove('selected'); });
-
-            // update text nav bar
-            TEXT_MENU[i].classList.add('selected');
-            TEXT_MENU.forEach((p, j) => { if (i != j) p.classList.remove('selected'); });
-
-            handlePage(i);
-        });
+        pageButton.addEventListener("click", handleClick);
+        pageButton.i = i;
+        pageButton.navigator = pageButton;
     });
 
     // animate logo pictogram
