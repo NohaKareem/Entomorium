@@ -9,7 +9,7 @@
     const PICTOGRAM = document.querySelector('.logo_pictogram');
     const SLOW_EASE = "slow(0.7, 0.7, false)";
 
-    const ANATOMY_LENS_PAGE = 2, INTERACTIVE_ANATOMY_SCROLL= 3, HABITAT_PAGE = 5, DIET_PAGE = 6;
+    const ANATOMY_LENS_PAGE = 2, INTERACTIVE_ANATOMY_SCROLL= 3, XRAY_PAGE = 4, HABITAT_PAGE = 5, DIET_PAGE = 6;
     let DAT_GUI;
 
     window.onload = _ => {
@@ -59,7 +59,6 @@
                     DAT_GUI.style.display = 'none';
 
                     // restart animation
-                    // ~ switch
                     if (j == ANATOMY_LENS_PAGE) {
                         lensTimeline.restart();
                     } else if (j == HABITAT_PAGE) {
@@ -67,7 +66,7 @@
                         DAT_GUI.style.display = 'block';
                     } else if (j == DIET_PAGE) {
                         dietTimeline.restart();
-                    }
+                    } 
                  }
                 else 
                     page.classList.add('hidden');
@@ -104,6 +103,7 @@
     let xrayCon = document.querySelector('.xrayCon');
     let imgTop = document.querySelector('.imgTop');
     let imgScrubber = document.querySelector('.imgScrubber');
+    let circleScrubber = document.querySelector('.circleScrubber');
 
     let isScrubbing = false;
     let start = 0, end = xrayCon.offsetWidth;
@@ -118,6 +118,10 @@
             
             imgScrubber.style.left = x + 'px';
             imgTop.style.width = x + 'px';
+
+            circleScrubber.classList.add('paused');
+        } else {
+            circleScrubber.classList.remove('paused');
         }
      });
 
