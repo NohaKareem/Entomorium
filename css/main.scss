@@ -469,7 +469,7 @@ h4.comingSoon {
             justify-items: center;
             align-items: center;
             position: fixed;
-            top: 50%;
+            top: 40%;
             left: 5%;
             z-index: 5;
 
@@ -490,38 +490,42 @@ h4.comingSoon {
                 @extend .selectedPage;
             }
         }
-
-        .textMenuCon {
+        &.textMenuCon {
             position: relative;
+
+            .textMenu {
+                position: fixed;
+                display: flex;
+                flex-direction: row;
+                width: 400px;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                padding: 15px 0;
+                transform: rotate(90deg);
+                // margin-top: -83%;
+                // margin-left: 95%;
+                
+                top: 60%;
+                right: -7%;
+    
+                li {
+                    font-size: $pSize / 2;
+                    line-height: $pSize;
+                    margin-right: 15px;
+                }
+    
+                a:hover {
+                    cursor: default;
+                    text-decoration: none;
+                }
+    
+                a.selected {
+                    text-decoration: underline;
+                }
+            }
         }
-        .textMenu {
-            position: absolute;
-            display: flex;
-            flex-direction: row;
-            width: 400px;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            padding: 15px 0;
-            transform: rotate(90deg);
-            margin-top: -83%;
-            margin-left: 95%;
-
-            li {
-                font-size: $pSize / 2;
-                line-height: $pSize;
-                margin-right: 15px;
-            }
-
-            a:hover {
-                cursor: default;
-                text-decoration: none;
-            }
-
-            a.selected {
-                text-decoration: underline;
-            }
-        }
+        
     }
 }
 

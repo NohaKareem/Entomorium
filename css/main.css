@@ -420,7 +420,7 @@ h4.comingSoon {
   justify-items: center;
   align-items: center;
   position: fixed;
-  top: 50%;
+  top: 40%;
   left: 5%;
   z-index: 5;
 }
@@ -435,11 +435,11 @@ h4.comingSoon {
 .container nav ul.paginationNav li div.selected {
   background-color: transparent;
 }
-.container nav .textMenuCon {
+.container nav.textMenuCon {
   position: relative;
 }
-.container nav .textMenu {
-  position: absolute;
+.container nav.textMenuCon .textMenu {
+  position: fixed;
   display: flex;
   flex-direction: row;
   width: 400px;
@@ -448,19 +448,19 @@ h4.comingSoon {
   justify-content: center;
   padding: 15px 0;
   transform: rotate(90deg);
-  margin-top: -83%;
-  margin-left: 95%;
+  top: 60%;
+  right: -7%;
 }
-.container nav .textMenu li {
+.container nav.textMenuCon .textMenu li {
   font-size: 15px;
   line-height: 30px;
   margin-right: 15px;
 }
-.container nav .textMenu a:hover {
+.container nav.textMenuCon .textMenu a:hover {
   cursor: default;
   text-decoration: none;
 }
-.container nav .textMenu a.selected {
+.container nav.textMenuCon .textMenu a.selected {
   text-decoration: underline;
 }
 
