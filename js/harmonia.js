@@ -41,6 +41,25 @@
         });
     });
 
+    let handlePage = (page, i, j) => {
+        if (j == i) {
+            page.classList.remove('hidden');
+            DAT_GUI.style.display = 'none';
+
+            // restart animation
+            if (j == ANATOMY_LENS_PAGE) {
+                lensTimeline.restart();
+            } else if (j == HABITAT_PAGE) {
+                gsap.fromTo(DAT_GUI, 3, { opacity: 0 }, { opacity: 1, ease: SLOW_EASE });
+                DAT_GUI.style.display = 'block';
+            } else if (j == DIET_PAGE) {
+                dietTimeline.restart();
+            } 
+         }
+        else 
+            page.classList.add('hidden');
+    }
+
     // add pagination
     PAGE_NAV.forEach((pageButton, i) => {
         pageButton.addEventListener("click", _ => {
@@ -54,22 +73,7 @@
 
             // show relevant page
             PAGES.forEach((page, j) => {
-                if (j == i) {
-                    page.classList.remove('hidden');
-                    DAT_GUI.style.display = 'none';
-
-                    // restart animation
-                    if (j == ANATOMY_LENS_PAGE) {
-                        lensTimeline.restart();
-                    } else if (j == HABITAT_PAGE) {
-                        gsap.fromTo(DAT_GUI, 3, { opacity: 0 }, { opacity: 1, ease: SLOW_EASE });
-                        DAT_GUI.style.display = 'block';
-                    } else if (j == DIET_PAGE) {
-                        dietTimeline.restart();
-                    } 
-                 }
-                else 
-                    page.classList.add('hidden');
+                handlePage(page, i, j);
             });
         });
     });

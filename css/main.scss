@@ -38,7 +38,7 @@ iframe {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: underline;
     color: $inkyJetChracoal;
 }
 
@@ -51,6 +51,8 @@ body {
     color: $inkyJetChracoal;
     font-family: 'Open Sans', sans-serif;
 }
+
+// .bold { font-weight: bold; }
 
 main {
     display: flex;
@@ -256,7 +258,7 @@ h4.comingSoon {
                 width: 60vw;
             }
         }
-        .page5 {//d
+        .page5 {
             h2 {
                 margin-left: -5%;
             }
@@ -360,7 +362,7 @@ h4.comingSoon {
         }
     }
 
-    .page6 {//d
+    .page6 {
         .caption {
             // margin-top: 2.5%;
             margin-top: $marginShift * -1.5;
@@ -391,7 +393,7 @@ h4.comingSoon {
             }
         }
     }
-    .page7 {//d
+    .page7 {
         .xrayConCon {
             width: $imgWidth;
             margin: 0 auto;
@@ -515,10 +517,14 @@ h4.comingSoon {
                     margin-right: 15px;
                 }
     
-                a:hover {
-                    cursor: default;
+                a {
                     text-decoration: none;
                 }
+
+                // a:hover {
+                //     cursor: default;
+                //     text-decoration: none;
+                // }
     
                 a.selected {
                     text-decoration: underline;

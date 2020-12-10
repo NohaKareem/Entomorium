@@ -11,7 +11,7 @@ iframe {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
   color: #10061A;
 }
 
@@ -456,8 +456,7 @@ h4.comingSoon {
   line-height: 30px;
   margin-right: 15px;
 }
-.container nav.textMenuCon .textMenu a:hover {
-  cursor: default;
+.container nav.textMenuCon .textMenu a {
   text-decoration: none;
 }
 .container nav.textMenuCon .textMenu a.selected {
