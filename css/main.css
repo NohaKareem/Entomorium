@@ -399,6 +399,27 @@ h4.comingSoon {
   background: url(../images/harmonia/harmonia__xray_1.png) no-repeat;
   width: 50%;
 }
+.container .page7 .xrayConCon .xrayCon .line {
+  width: 2px;
+  background-color: #10061A;
+  height: 240px;
+  position: absolute;
+}
+.container .page7 .xrayConCon .xrayCon .digestive {
+  top: 17%;
+  left: 60%;
+}
+.container .page7 .xrayConCon .xrayCon .digestive2 {
+  height: 180px;
+  top: 4.5%;
+  left: 67%;
+  transform: rotate(90deg);
+}
+.container .page7 .xrayConCon .xrayCon .digestiveLabel {
+  position: absolute;
+  top: 18%;
+  left: 61%;
+}
 .container .selectedPage, .container nav ul.paginationNav li div:hover {
   cursor: pointer;
   background-color: transparent;

@@ -445,6 +445,15 @@ h4.comingSoon {
                         width: 50%;
                     }
                 }
+                .line {
+                    width: 2px;
+                    background-color: $inkyJetChracoal;
+                    height: $imgHeight / 3;
+                    position: absolute;
+                }
+                .digestive { top: 17%; left: 60%; }
+                .digestive2 { height: $imgHeight / 4; top: 4.5%; left: 67%; transform: rotate(90deg); }
+                .digestiveLabel { position: absolute; top: 18%; left: 61%; }
             }
         
         }
