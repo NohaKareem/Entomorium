@@ -420,6 +420,21 @@ h4.comingSoon {
   top: 18%;
   left: 61%;
 }
+.container .page7 .xrayConCon .xrayCon .circulatory {
+  top: 9%;
+  left: 55%;
+}
+.container .page7 .xrayConCon .xrayCon .circulatory2 {
+  height: 180px;
+  top: -3.5%;
+  left: 62%;
+  transform: rotate(90deg);
+}
+.container .page7 .xrayConCon .xrayCon .circulatoryLabel {
+  position: absolute;
+  top: 10%;
+  left: 56%;
+}
 .container .selectedPage, .container nav ul.paginationNav li div:hover {
   cursor: pointer;
   background-color: transparent;
