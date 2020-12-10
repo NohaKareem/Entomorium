@@ -53,8 +53,12 @@
 
                 // handle separate pages 
                 switch(j) {
-                    // reset animation
+                    // reset lenses + animation
                     case ANATOMY_LENS_PAGE:
+                       toggleAlpha.forEach((lensAlpha, k) => { 
+                           lensAlpha = 1; 
+                           gsap.to(LENS_INFO[k], 0, { autoAlpha: 0 });
+                    });
                        lensTimeline.restart();
                         break;
                     case HABITAT_PAGE:
