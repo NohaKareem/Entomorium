@@ -151,7 +151,16 @@
             let x = e.clientX - xrayCon.getBoundingClientRect().left;
             if(x < start) { x = start; }
             else if (x > end) { x = end; } 
-            
+
+            // check to show labels 
+            if (x > (end - start) / 2) {
+                LABEL_LINES.forEach(line => { line.classList.add('hidden'); });
+                LINE_LABELS.forEach(label => { label.classList.add('hidden'); });
+            } else {
+                LABEL_LINES.forEach(line => { line.classList.remove('hidden'); });
+                LINE_LABELS.forEach(label => { label.classList.remove('hidden'); });
+            }
+
             imgScrubber.style.left = x + 'px';
             imgTop.style.width = x + 'px';
 
