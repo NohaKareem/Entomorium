@@ -9,7 +9,7 @@
     const PICTOGRAM = document.querySelector('.logo_pictogram');
     const SLOW_EASE = "slow(0.7, 0.7, false)";
 
-    const ANATOMY_LENS_PAGE = 2, INTERACTIVE_ANATOMY_SCROLL= 3, XRAY_PAGE = 4, HABITAT_PAGE = 5, DIET_PAGE = 6;
+    const ANATOMY_LENS_PAGE = 4, HABITAT_PAGE = 3, DIET_PAGE = 2;
     let DAT_GUI;
 
     window.onload = _ => {
