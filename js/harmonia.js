@@ -129,7 +129,8 @@
     google.charts.load('current', { packages: ['wordtree'] });
     google.charts.setOnLoadCallback(renderWordTree);
     let data;
-    function renderWordTree() {//~
+    
+    function renderWordTree() {
         data = google.visualization.arrayToDataTable(
             [   ['id', 'childLabel', 'parent', 'size', { role: 'style'}],
                 [0, 'Arthropoda', -1, 1, '#10061A'],
