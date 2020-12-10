@@ -521,11 +521,6 @@ h4.comingSoon {
                     text-decoration: none;
                 }
 
-                // a:hover {
-                //     cursor: default;
-                //     text-decoration: none;
-                // }
-    
                 a.selected {
                     text-decoration: underline;
                 }
@@ -608,9 +603,8 @@ h4.comingSoon {
 }
 
 #datGui {
-    // transform: translate(-50%, 70%);
     margin-top: 25%;
-    margin-right: 5%;
+    margin-right: 10%;
     border-top: 5px solid $inkyJetChracoal;
     display: none;
 
