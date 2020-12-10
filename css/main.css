@@ -200,13 +200,9 @@ h4.comingSoon {
   margin-top: 0%;
   width: 60vw;
 }
-.container .paginationCon .page5 h2 {
-  margin-left: -5%;
-}
 .container .paginationCon .page5 .caption {
   margin: 0 auto;
   text-align: center;
-  margin-left: -5%;
   margin-top: 30px;
 }
 .container .paginationCon .page5 .harmoniaAnatomy1 {
@@ -499,10 +495,13 @@ h4.comingSoon {
   text-align: center;
 }
 
+.page3 {
+  position: relative;
+}
 .page3 .overlayText {
-  margin-top: 15%;
+  margin-top: 10%;
   margin-left: 30%;
-  background-color: #fdfdec;
+  background-color: #FDFDEC !important;
 }
 .page3 .dietCon {
   width: 100vw;
@@ -517,6 +516,12 @@ h4.comingSoon {
   width: 12.8px;
   height: 10.2857142857px;
   transform: scale(0.25);
+}
+.page3 .htImg {
+  position: absolute;
+  width: 320px;
+  top: 10%;
+  z-index: 3;
 }
 
 #datGui {
