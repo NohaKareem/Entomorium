@@ -193,6 +193,9 @@ h4.comingSoon {
   align-items: center;
   align-content: center;
 }
+.container .paginationCon .page2 .caption {
+  margin-top: 1.5%;
+}
 .container .paginationCon .page2 .wordTree {
   margin-top: 0%;
   width: 60vw;
